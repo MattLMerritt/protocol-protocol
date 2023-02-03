@@ -5,11 +5,11 @@ Device::Device(int id){
 }
 
 void Device::removeLine(Line* line) {
-    //Device::line = 0;
+    Device::lines.remove(line);
 }
 
 void Device::addLine(Line* line) {
-    //Device::line = line;
+    Device::lines.insert(lines.begin(), line);
 }
 
 void Device::addData(void* data){

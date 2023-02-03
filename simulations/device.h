@@ -2,6 +2,7 @@
 #define __DEVICE_H__
 
 #include <line.h>
+#include <list>
 
 class Device {
     public:
@@ -18,9 +19,10 @@ class Device {
 
     private:
         int device_id;
-        Line** lines;
-
         void* data;
+
+        std::list<Line*> lines;
+        
 };
 
 #endif

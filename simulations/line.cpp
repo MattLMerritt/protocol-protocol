@@ -17,21 +17,13 @@ void Line::removeLine(){
     Line::removeOutgoingConnection();
 }
 
-/*
 void Line::removeIncomingConnection(){
-    if(Line::incoming != 0 && (&Line::incoming)){
-        Line::incoming_device->removeLine();
-        Line::incoming_device = 0;
-    }
+    Line::incoming = 0;
 }
 
 void Line::removeOutgoingConnection(){
-    if(Line::outgoing_device != 0){
-        Line::outgoing_device->removeLine();
-        Line::outgoing_device = 0;
-    }
+    Line::outgoing = 0;
 }
-*/
 
 // add the line to the device
 /*

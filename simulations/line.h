@@ -6,23 +6,23 @@
 class Line {
     public:
         Line();
-        Line(Device* incoming, Device* outgoing);
+        Line(void* incoming, void* outgoing);
 
 
         void removeLine();
         void removeIncomingConnection();
         void removeOutgoingConnection();
 
-        void addIncomingConnection(Device* device);
-        void addOutgoingConnection(Device* device);
+        void addIncomingConnection(void* inc);
+        void addOutgoingConnection(void* out);
 
         void addData(void* data);
         
         void printInformation();
 
     private:
-        Device* incoming_device;
-        Device* outgoing_device;
+        void* incoming;
+        void* outgoing;
 
         void* data;
 };

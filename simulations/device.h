@@ -8,15 +8,17 @@ class Device {
         Device(int id);
         Device(int id, Line* line);
 
-        void removeLine();
+        void removeLine(Line* line);
         void addLine(Line* line);
         void addData(void* data);
+
+        void sendData();
 
         int getID(){ return device_id; }
 
     private:
         int device_id;
-        Line* line;
+        Line** lines;
 
         void* data;
 };

@@ -1,4 +1,5 @@
 #include <line.h>
+#include <iostream>
 
 Line::Line(){
     Line::incoming_device = 0;
@@ -40,5 +41,13 @@ void Line::addIncomingConnection(Device* device){
 void Line::addOutgoingConnection(Device* device){
     if(Line::outgoing_device == 0){
         Line::outgoing_device = device;
+    }
+}
+
+void Line::printInformation() {
+    std::cout << "Incoming Device ID: " + Line::incoming_device->getID() << std::endl;
+    std::cout << "Outgoing Device ID: " + Line::outgoing_device->getID() << std::endl;
+    if(data != 0){
+        std::cout << data << std::endl;
     }
 }

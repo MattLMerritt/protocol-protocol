@@ -16,6 +16,9 @@ class Line {
         void addIncomingConnection(Device* device);
         void addOutgoingConnection(Device* device);
 
+        
+        void printInformation();
+
     private:
         Device* incoming_device;
         Device* outgoing_device;

@@ -11,3 +11,7 @@ void Device::removeLine() {
 void Device::addLine(Line* line) {
     Device::line = line;
 }
+
+void Device::addData(void* data){
+    Device::data = data;
+}

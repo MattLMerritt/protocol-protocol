@@ -44,6 +44,10 @@ void Line::addOutgoingConnection(Device* device){
     }
 }
 
+void Line::addData(void* data){
+    Line::data = data;
+}
+
 void Line::printInformation() {
     std::cout << "Incoming Device ID: " + Line::incoming_device->getID() << std::endl;
     std::cout << "Outgoing Device ID: " + Line::outgoing_device->getID() << std::endl;

@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 #include <event.h>
+#include <queue>
 
 class GlobalQueue {
     public:
@@ -13,7 +14,7 @@ class GlobalQueue {
         void processNext();
 
     private:
-
+        std::queue<Event> events;    // will change later as soon as we deal with bigger data
 };
 
 #endif

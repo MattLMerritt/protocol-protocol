@@ -7,6 +7,8 @@ class Event {
     public:
         Event() {};
 
+        virtual void triggerEvent();
+
     private:
         std::string temporary; // remove this if we figure out what event should be
 };

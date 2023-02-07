@@ -5,12 +5,17 @@
 
 #include <device.h>
 #include <line.h>
+#include <globalqueue.h>
+#include <event.h>
 
 #include <timer.h>
 
 int main(){
 
-    // Intialize Devices
+    // Initialize a global queue
+    GlobalQueue global;
+
+    // Initialize Devices
     Device device_one(1);
     Device device_two(2);
 

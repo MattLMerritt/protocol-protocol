@@ -33,6 +33,7 @@ class Device {
     private:
         int device_id;
         void* data;
+        DeviceState state;
 
         std::list<Line*> lines;
         

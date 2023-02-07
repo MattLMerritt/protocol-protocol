@@ -2,8 +2,6 @@
 #include <stdlib.h>
 
 
-#include <scene.h>
-#include <frame.h>
 
 #include <device.h>
 #include <line.h>

@@ -13,8 +13,8 @@ Line::Line(void* incoming, void* outgoing) {
 
 // removes the line from a devices
 void Line::removeLine(){
-    Line::removeIncomingConnection();
-    Line::removeOutgoingConnection();
+    removeIncomingConnection();
+    removeOutgoingConnection();
 }
 
 void Line::removeIncomingConnection(){
@@ -26,19 +26,18 @@ void Line::removeOutgoingConnection(){
 }
 
 // add the line to the device
-/*
-void Line::addIncomingConnection(Device* device){
+void Line::addIncomingConnection(void* inc){
     if(Line::incoming_device == 0){
         Line::incoming_device = device;
     }
 }
 
-void Line::addOutgoingConnection(Device* device){
+void Line::addOutgoingConnection(void* out){
     if(Line::outgoing_device == 0){
         Line::outgoing_device = device;
     }
 }
-*/
+
 void Line::addData(void* data){
     Line::data = data;
 }

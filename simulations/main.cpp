@@ -21,9 +21,7 @@ int main(){
 
     // Add wires/lines    
     Line message(&device_one, &device_two);
-    Line rec(&device_two, &device_one);
-
-    
+    Line rec(&device_two, &device_one);    
 
     return 0;
 }

@@ -2,6 +2,7 @@
 #define __DEVICE_H__
 
 #include <line.h>
+#include "base.h"
 #include <list>
 
 enum DeviceState {
@@ -10,7 +11,7 @@ enum DeviceState {
     recieving = 2,
 };
 
-class Device {
+class Device : public virtual Base {
     public:
         // constructor/destructors
         Device(int id);

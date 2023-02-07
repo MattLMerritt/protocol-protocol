@@ -5,10 +5,16 @@
 
 class Line {
     public:
+        // constructor/destructors
         Line();
         Line(void* incoming, void* outgoing);
 
+        // line default property interfaces
+        void transmit();
+        void recieve();
+        void getQueue(); // not concrete yet
 
+        // line properties
         void removeLine();
         void removeIncomingConnection();
         void removeOutgoingConnection();

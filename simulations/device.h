@@ -4,18 +4,31 @@
 #include <line.h>
 #include <list>
 
+enum DeviceState {
+    normal = 0,
+    sending = 1,
+    recieving = 2,
+};
+
 class Device {
     public:
+        // constructor/destructors
         Device(int id);
         Device(int id, Line* line);
 
-        void removeLine(Line* line);
-        void addLine(Line* line);
-        void addData(void* data);
+        // device default property interfaces
+        int getID(){ return device_id; }
 
         void sendData();
+        void recieveData();
+        DeviceState getState();
 
-        int getID(){ return device_id; }
+        // line properties
+        void removeLine(Line* line);
+        void addLine(Line* line);
+
+        // data properties
+        void addData(void* data);
 
     private:
         int device_id;

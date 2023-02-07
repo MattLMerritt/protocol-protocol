@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.dfy": "dafny",
+        "iostream": "cpp"
+    }
+}

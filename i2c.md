@@ -31,7 +31,7 @@ Here is an example of how we can use I2C to connect a microcontroller and an ult
 void setup() {
   Wire.begin();  // Initialize I2C communication
 
-  Serial.begin(9600);  // Start serial communication at 9600 baud rate
+  Serial.begin(9600);  // Start serial communication at 9600 bps
 
   pinMode(LED_PIN, OUTPUT);  // Set the LED pin as an output
 }
@@ -43,7 +43,7 @@ void loop() {
 
   Wire.write(byte(0x00));  // Send command to start distance reading
 
-  Wire.write(byte(0x51));  // Specify the distance measurement resolution (11-bit)
+  Wire.write(byte(0x51));  // Specify the distance measurement unit
 
   Wire.endTransmission();  // End I2C transmission
 

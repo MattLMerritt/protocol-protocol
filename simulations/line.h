@@ -3,20 +3,25 @@
 
 #include <device.h>
 
-class Line {
+class Line : public virtual Base {
     public:
+        // constructor/destructors
         Line();
-        Line(void* incoming, void* outgoing);
 
+        // line default property interfaces
+        void transmit();
+        void recieve(void* data);
+        void getQueue(); // not concrete yet
 
+        // line properties
         void removeLine();
         void removeIncomingConnection();
         void removeOutgoingConnection();
 
-        void addIncomingConnection(void* inc);
-        void addOutgoingConnection(void* out);
-
-        void addData(void* data);
+        void connectIncomingDevice(Device inc){ incoming = &inc; }
+        void connectOutgoingDevice(Device out){ outgoing = &out; }
+        void connectIncomingLine(Line inc){ incoming = &inc; }
+        void connectOutgoingLine(Line out){ outgoing = &out; }
         
         void printInformation();
 

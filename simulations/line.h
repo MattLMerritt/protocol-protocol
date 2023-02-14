@@ -2,15 +2,17 @@
 #define __LINE_H__
 
 #include <device.h>
+#include <data.h>
+#include <base.h>
 
 class Line : public virtual Base {
     public:
         // constructor/destructors
-        Line();
+        Line(int id);
 
         // line default property interfaces
         void transmit();
-        void recieve(void* data);
+        // void recieve(Data* data);
         void getQueue(); // not concrete yet
 
         // line properties
@@ -22,14 +24,11 @@ class Line : public virtual Base {
         void connectOutgoingDevice(Device out){ outgoing = &out; }
         void connectIncomingLine(Line inc){ incoming = &inc; }
         void connectOutgoingLine(Line out){ outgoing = &out; }
-        
-        void printInformation();
 
     private:
-        void* incoming;
-        void* outgoing;
+        Base* incoming;
+        Base* outgoing;
 
-        void* data;
 };
 
 #endif

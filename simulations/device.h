@@ -17,25 +17,15 @@ class Device : public virtual Base {
         Device(int id);
         Device(int id, Line* line);
 
-        // device default property interfaces
-        int getID(){ return device_id; }
-
         void sendData();
-        void recieveData();
-        DeviceState getState();
+        DeviceState getState(){ return state; }
 
         // line properties
         void removeLine(Line* line);
         void addLine(Line* line);
 
-        // data properties
-        void addData(void* data);
-
     private:
-        int device_id;
-        void* data;
         DeviceState state;
-
         std::list<Line*> lines;
         
 };

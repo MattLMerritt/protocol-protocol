@@ -1,17 +1,14 @@
 #include <line.h>
 #include <iostream>
 
-Line::Line(){
+Line::Line(int id){
     Line::incoming = 0;
     Line::outgoing = 0;
+    setID(id);
 }
 
 void Line::transmit(){
-    
-}
-
-void Line::recieve(void* data){
-    Line::data = data;
+    outgoing->recieve(outgoing->getData());
 }
 
 // removes the line from a devices

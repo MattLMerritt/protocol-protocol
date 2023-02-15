@@ -12,7 +12,7 @@ class Base {
 
         virtual void recieve(Data* data) { Base::data = data; }
         virtual void setID(int id) { Base::id = id; }
-        
+
         virtual int getID() const { return id; }
         virtual Data* getData() const { return data; }
         

@@ -1,7 +1,6 @@
 #ifndef __LINE_H__
 #define __LINE_H__
 
-#include "data.h"
 #include "base.h"
 
 class Line : public virtual Base {
@@ -26,5 +25,10 @@ class Line : public virtual Base {
         Base* outgoing;
 
 };
+
+inline std::ostream& operator<<(std::ostream& os, const Line& line) {
+    os << "Line " << line.getID() << ": " << *(line.getData());
+    return os;
+}
 
 #endif

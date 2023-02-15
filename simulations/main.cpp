@@ -26,11 +26,14 @@ int main(){
     Line line_two(2);
 
     // connect wires
-    device_one.addLine(&line_one);
-    device_two.addLine(&line_two);
+    //device_one.addLine(&line_one);
+    //device_two.addLine(&line_two);
 
     std::cout << data1 << std::endl;
-    std::cout << data2 << std::endl;
+    //std::cout << data2 << std::endl;
+
+    line_one.recieve(&data1);
+    std::cout << line_one << std::endl;
 
     return 0;
 }

@@ -1,7 +1,7 @@
 #ifndef __DEVICE_H__
 #define __DEVICE_H__
 
-#include <line.h>
+#include "line.h"
 #include "base.h"
 #include <list>
 
@@ -18,16 +18,19 @@ class Device : public virtual Base {
         Device(int id, Line* line);
 
         void sendData();
+        void recieve(Data* data) override;
         DeviceState getState(){ return state; }
 
         // line properties
-        void removeLine(Line* line);
-        void addLine(Line* line);
+        void removeIncomingLine(Line* line);
+        void removeOutgoingLine(Line* line);
+        void addIncomingLine(Line* line);
+        void addOutgoingLine(Line* line);
 
     private:
         DeviceState state;
-        std::list<Line*> lines;
-        
+        std::list<Line*> outgoingLines;
+        std::list<Line*> incomingLines;
 };
 
 #endif

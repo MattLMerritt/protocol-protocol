@@ -3,9 +3,8 @@
 
 #include <iostream>
 
-class Data { 
-    public:
-        virtual friend std::ostream& operator<<(std::ostream& os, const Data& data);
-};
+class Data { };
+
+inline std::ostream& operator<<(std::ostream& os, const Data& data){ return os; }
 
 #endif

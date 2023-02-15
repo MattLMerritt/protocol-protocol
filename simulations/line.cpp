@@ -1,5 +1,6 @@
-#include <line.h>
 #include <iostream>
+
+#include "line.h"
 
 Line::Line(int id){
     Line::incoming = 0;
@@ -25,10 +26,10 @@ void Line::removeOutgoingConnection(){
     Line::outgoing = 0;
 }
 
-void Line::printInformation() {
+//void Line::printInformation() {
     //std::cout << "Incoming Device ID: " + Line::incoming_device->getID() << std::endl;
     //std::cout << "Outgoing Device ID: " + Line::outgoing_device->getID() << std::endl;
     //if(data != 0){
     //    std::cout << data << std::endl;
     //}
-}
+//}

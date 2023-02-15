@@ -14,7 +14,10 @@ class TestData : public virtual Data {
             day = d;
         }
 
-        friend std::ostream& operator<<(std::ostream& os, const TestData& td);
+        std::string getName() const { return name; }
+        int getMonth() const { return month; }
+        int getDay() const { return day; }
+
     private:
         std::string name;
         int month;
@@ -22,7 +25,7 @@ class TestData : public virtual Data {
 };
 
 std::ostream& operator<<(std::ostream& os, const TestData& td){
-    os << "Today is: " << td.month << '/' << td.day << "\nHappy Birthday " << td.name << '!' << std::endl;
+    os << "Today is: " << td.getMonth() << '/' << td.getDay() << "\nHappy Birthday " << td.getName() << '!' << std::endl;
     return os;
 }
 

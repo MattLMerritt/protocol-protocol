@@ -2,8 +2,9 @@
 #define __GLOBAL_QUEUE_H__
 
 #include <stdint.h>
-#include <event.h>
 #include <queue>
+
+#include "event.h"
 
 class GlobalQueue {
     public:

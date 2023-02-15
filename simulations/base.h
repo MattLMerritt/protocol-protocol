@@ -11,13 +11,12 @@ class Base {
         Base(int id){ Base::id = id; }
 
         virtual void recieve(Data* data) { Base::data = data; }
-
         virtual void setID(int id) { Base::id = id; }
-        virtual int getID() { return id; }
-        virtual Data* getData() { return data; }
+        
+        virtual int getID() const { return id; }
+        virtual Data* getData() const { return data; }
         
         virtual void removeData() { data = 0; }
-        virtual friend std::ostream& operator<<(std::ostream& os, const Base& base);
 
     private:
         Data* data;
@@ -25,8 +24,8 @@ class Base {
 
 };
 
-std::ostream& operator<<(std::ostream& os, const Base& base) {
-    os << *base.data;
+inline std::ostream& operator<<(std::ostream& os, const Base& base) {
+    os << base.getData();
     return os;
 }
 

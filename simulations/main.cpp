@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include <device.h>
-#include <line.h>
-#include <globalqueue.h>
-#include <event.h>
-
-#include <testdata.h>
-
-#include <timer.h>
+#include "line.h"
+#include "device.h"
+#include "globalqueue.h"
+#include "event.h"
+#include "testdata.h"
+#include "timer.h"
 
 int main(){
 
@@ -24,7 +22,12 @@ int main(){
     Device device_two(2);
 
     // Add wires/lines    
-    //Line line_one() ;
+    Line line_one(1);
+    Line line_two(2);
+
+    // connect wires
+    device_one.addLine(&line_one);
+    device_two.addLine(&line_two);
 
     std::cout << data1 << std::endl;
     std::cout << data2 << std::endl;

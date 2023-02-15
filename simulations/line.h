@@ -1,9 +1,8 @@
 #ifndef __LINE_H__
 #define __LINE_H__
 
-#include <device.h>
-#include <data.h>
-#include <base.h>
+#include "data.h"
+#include "base.h"
 
 class Line : public virtual Base {
     public:
@@ -20,11 +19,8 @@ class Line : public virtual Base {
         void removeIncomingConnection();
         void removeOutgoingConnection();
 
-        void connectIncomingDevice(Device inc){ incoming = &inc; }
-        void connectOutgoingDevice(Device out){ outgoing = &out; }
-        void connectIncomingLine(Line inc){ incoming = &inc; }
-        void connectOutgoingLine(Line out){ outgoing = &out; }
-
+        void connectIncomingConnection(Base* inc){ incoming = inc; }
+        void connectOutgoingConnection(Base* out){ outgoing = out; }
     private:
         Base* incoming;
         Base* outgoing;

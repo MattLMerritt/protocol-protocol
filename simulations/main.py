@@ -1,21 +1,44 @@
 from enum import Enum
 from collections import deque
-import random
+from heapq import heapify, heappush, heappop
+from device import Device
 
 class DeviceState(Enum):
-    empty = 0
-    full = 1
+    EMPTY = 0
+    FULL = 1
+
+class EventState(Enum):
+    SEND = 0
+    TBH = 1
+
+class Event:
+
+    def __init__(self, event_type, device: Device, timestamp):
+        self.event_type = event_type
+        self.timestamp = timestamp
+        self.device = device
+    
+    def process_device(self):
+        self.device.process()
+    
+    def __lt__(self, next):
+        return self.timestamp < next.timestamp
 
 class GlobalQueue:
 
+    def __init__(self):
+        self.global_queue = []
+        heapify(self.global_queue)
+    
+    def addEvent(self, event: Event):
+        self.global_queue.append(event)
+        heapify(self.global_queue)
+
     def processNext(self):
-        function = self.global_queue.pop
-        function.process()
+        event = heappop(self.global_queue)
+        event.process_device()
 
     #def addEvent(timestamp: int)
-
-    def __init__(self):
-        self.global_queue = deque()
 
 class Device:
 
@@ -78,31 +101,3 @@ def send(source: Device, buffer: int, dest: Device, timestamp: float) -> None:
 #device1.process()
 #device2.process()
 
-# input seed: 42
-input_seed = 42
-random.seed(input_seed)
-
-# total devices
-total_devices = 10
-devices = []
-for i in range(total_devices): 
-    devices.append(Device(i))
-
-# range of time
-start_time_range = [0, 5]
-stay_time_range = [0, 5]
-
-# generate information tuple to send from CPU: ((send_time, (buffer, stay_time)), ...)
-total_information_to_send = 100
-buffers = deque()
-random_start_time = 0
-for i in range(total_information_to_send):
-    # create a random buffer
-    buffer = random.randint(0, 64)
-    random_start_time += random.randint(start_time_range[0], start_time_range[1])
-    buffers.append((random_start_time, (bin(buffer), random.randint(stay_time_range[0], stay_time_range[1]))))
-
-# print(buffers)
-
-while(buffers.count() > 0):
-    if((buffers.index(0)))

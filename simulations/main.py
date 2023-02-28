@@ -3,10 +3,6 @@ from collections import deque
 from heapq import heapify, heappush, heappop
 from device import Device
 
-class DeviceState(Enum):
-    EMPTY = 0
-    FULL = 1
-
 class EventState(Enum):
     SEND = 0
     TBH = 1

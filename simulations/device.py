@@ -7,6 +7,11 @@ Created on Tue Feb 28 16:13:33 2023
 
 import random
 import timer
+from enum import Enum
+
+class DeviceState(Enum):
+    EMPTY = 0
+    FULL = 1
 
 class Device: 
     def __init__(self):
@@ -27,6 +32,9 @@ class Device:
         self.timers.append(timer.Timer())
         self.timers[-1].setId(timer_id)
         self.timers[-1].setCurtime(timer_curtime)
+    
+    def send(self):
+        
     
     def generateRandomMessage(self):
         randstr = ""

@@ -4,8 +4,10 @@ from heapq import heapify, heappush, heappop
 from device import Device
 
 class EventState(Enum):
-    SEND = 0
-    TBH = 1
+    IDLE = 0
+    SENDING = 1
+    RECEIVING = 2
+    SENDING_AND_RECEIVING = 3
 
 class Event:
 

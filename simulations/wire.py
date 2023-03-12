@@ -19,7 +19,7 @@ class WireState(Enum):
     EMPTY = 0
     IN_USE = 1
 
-class wire:
+class Wire():
     def __init__(self, from_id, to_id, world_devices):
         self.local_time = 0
         self.time_and_data = {}
@@ -41,3 +41,4 @@ class wire:
         # calls receive on rec_device if there is a message that should be received at the current time
         if(self.time_and_data.get(global_time) != None):
             self.world_devices[self.rec_device_id].receive(self.time_and_data.get(global_time))
+            print("D" + str(self.send_device_id) + " ---[" + str(self.time_and_data.get(global_time)) + "]---> D" + str(self.rec_device_id))

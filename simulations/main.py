@@ -18,9 +18,27 @@ instead of having a global queue that handles the status of message and routing 
 """
 
 import device
+from device import Device
+from wire import Wire
 import wire
 
 
 if __name__ == "__main__":
 
     print("hello world")
+
+    '''
+    Example configuration:
+    [Device 1] --> [Device 2]
+    
+    '''
+    World = {}
+    D1 = Device()
+    D2 = Device()
+    World[1] = D1
+    World[2] = D2
+
+    w1 = Wire(1, 2, World)
+
+    D1.send(w1, "hi")
+    w1.process(0)

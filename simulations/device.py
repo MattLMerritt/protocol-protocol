@@ -15,11 +15,11 @@ class DeviceState(Enum):
     SENDING_AND_RECEIVING = 3
 
 
-class device:
+class Device():
     def __init__(self):
         self.local_time = 0
         # timed_sends is randomized used to emulate a "live" device 
-        # the key is the timestep when the message should be sent and the value is the data to be sent
+        # the key is the time-step when the message should be sent and the value is the data to be sent
         self.timed_sends = {}
         self.timed_sends[-1] = "pre-init-send"
 
@@ -34,4 +34,5 @@ class device:
 
     def receive(self, content):
         self.received_content.append(content)
+        print(content)
 

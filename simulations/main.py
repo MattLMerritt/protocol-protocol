@@ -17,12 +17,27 @@ instead of having a global queue that handles the status of message and routing 
 
 """
 
+import json
+
 import device
 from device import Device
 from wire import Wire
 import wire
 
 time_steps = 10
+
+
+def convert_states_into_json(world_devices, world_wires, global_time):
+    # format: key = id, value = state
+
+    for wire_it in world_wires.items():
+            id = wire_it[0]
+            state = wire_it[1]
+            
+    for device_it in world_devices.values():
+        device_it.increment_time()
+
+    pass
 
 
 if __name__ == "__main__":
@@ -41,11 +56,10 @@ if __name__ == "__main__":
     world_devices[1] = D1
     world_devices[2] = D2
 
-    w1 = Wire(1, 2, world_devices)
+    w1 = Wire(1, 2, world_devices, 3)
     world_wires[1] = w1
 
-    
-    w1.process(0)
+
 
     # processing loop:
     for global_clock in range(0, time_steps):
@@ -59,7 +73,14 @@ if __name__ == "__main__":
         # allow for sends from devices
         for device_it in world_devices.values():
 
-            device_it.send(world_wires[1], "00100")
+            pass
+
+        # update wire state info
+        for wire_it in world_wires.values():
+            wire_it.updateState(global_clock)
+
+        # save into format for graphing
+        convert_states_into_json(world_devices, world_wires, global_clock)
     
         # increment each device's local_clock
         for wire_it in world_wires.values():

@@ -22,6 +22,7 @@ class WireState(Enum):
 class Wire():
     def __init__(self, from_id, to_id, world_devices, wire_delay = 0):
         self.local_time = 0
+        self.state = WireState.EMPTY
         self.time_and_data = {}
         self.time_and_data[-1] = "pre-init-receive"
         self.send_device_id = from_id
@@ -44,3 +45,17 @@ class Wire():
         if(self.time_and_data.get(global_time) != None):
             self.world_devices[self.rec_device_id].receive(self.time_and_data.get(global_time))
             print("device " +  str(self.rec_device_id) + " received a message[" + str(self.time_and_data.get(global_time)) + "] from device " + str(self.send_device_id))
+
+    def updateState(self, global_time):
+        if(self.state == WireState.EMPTY):
+            self.state = WireState.EMPTY
+        
+        for val in self.time_and_data.keys():
+            if val > (global_time+1):
+                self.state = WireState.IN_USE
+            
+    def getStateString(self):
+        if(self.state == WireState.EMPTY):
+            return "EMPTY"
+        else:
+            return "IN_USE"

@@ -20,13 +20,14 @@ class WireState(Enum):
     IN_USE = 1
 
 class Wire():
-    def __init__(self, from_id, to_id, world_devices):
+    def __init__(self, from_id, to_id, world_devices, wire_delay = 0):
         self.local_time = 0
         self.time_and_data = {}
         self.time_and_data[-1] = "pre-init-receive"
         self.send_device_id = from_id
         self.rec_device_id = to_id
         self.world_devices = world_devices
+        self.wire_delay = wire_delay + 1 # wire delay arg must be non-zero
 
     def increment_time(self):
         # increment local time
@@ -34,11 +35,12 @@ class Wire():
     
     def send(self, content):
         # add content sent from device to time_and_data to be processed later
-        self.time_and_data[self.local_time] = content
+        self.time_and_data[self.local_time + self.wire_delay] = content
+        print("device " + str(self.send_device_id) + " sent off a message[" + str(content) + "] to device" + str(self.rec_device_id))
 
 
     def process(self, global_time):
         # calls receive on rec_device if there is a message that should be received at the current time
         if(self.time_and_data.get(global_time) != None):
             self.world_devices[self.rec_device_id].receive(self.time_and_data.get(global_time))
-            print("D" + str(self.send_device_id) + " ---[" + str(self.time_and_data.get(global_time)) + "]---> D" + str(self.rec_device_id))
+            print("device " +  str(self.rec_device_id) + " received a message[" + str(self.time_and_data.get(global_time)) + "] from device " + str(self.send_device_id))

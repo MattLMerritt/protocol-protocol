@@ -47,14 +47,14 @@ class Wire():
             print("device " +  str(self.rec_device_id) + " received a message[" + str(self.time_and_data.get(global_time)) + "] from device " + str(self.send_device_id))
 
     def updateState(self, global_time):
-        if(self.state == WireState.EMPTY):
-            self.state = WireState.EMPTY
-        
+        # update self state if there are any message left to be sent
+        self.state = WireState.EMPTY
         for val in self.time_and_data.keys():
-            if val > (global_time+1):
+            if val > (global_time-1):
                 self.state = WireState.IN_USE
             
     def getStateString(self):
+        # return string of state
         if(self.state == WireState.EMPTY):
             return "EMPTY"
         else:

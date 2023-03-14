@@ -24,8 +24,6 @@ from device import Device
 from wire import Wire
 import wire
 
-time_steps = 10
-
 def add_state_to_json(world_devices, world_wires, global_time, all_states_dict):
     # create dictionary of each device and wire with their assoisated state
 
@@ -50,10 +48,16 @@ if __name__ == "__main__":
     print("hello world")
 
     '''
-    Example configuration:
+    Example 
+    configuration:
     [Device 1] --> [Device 2]
+
+    purpose:
+    device send "hello world" to device 2 at timestep 2
+
     
     '''
+    time_steps = 10
     world_devices = {}
     world_wires = {}
     D1 = Device()
@@ -61,7 +65,7 @@ if __name__ == "__main__":
     world_devices[1] = D1
     world_devices[2] = D2
 
-    w1 = Wire(1, 2, world_devices, 3)
+    w1 = Wire(1, 2, world_devices, 1)
     world_wires[1] = w1
 
 
@@ -69,7 +73,7 @@ if __name__ == "__main__":
     # prepare export data for steps
     # populate fields of data
     export_data = {}
-    export_data["steps"] = 4
+    export_data["steps"] = time_steps
     export_data["devices"] = len(world_devices)
     export_data["wires"] = len(world_wires)
 
@@ -85,8 +89,10 @@ if __name__ == "__main__":
 
 
         # allow for sends from devices
+        # special logic for example:
+        if(global_clock == 2):
+                world_devices[1].send(world_wires[1], "hello world")
         for device_it in world_devices.values():
-
             pass
 
         # update wire state info

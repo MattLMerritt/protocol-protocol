@@ -28,11 +28,13 @@ class Device():
         self.received_content = []
 
     def increment_time(self):
+        # increment local time
         self.local_time = self.local_time + 1
         self.state = DeviceState.IDLE
 
 
     def send(self, wire, content):
+        # send content to wire and update device state
         wire.send(content)
         if(self.state == DeviceState.RECEIVING):
             self.state = DeviceState.SENDING_AND_RECEIVING
@@ -41,11 +43,13 @@ class Device():
 
 
     def receive(self, content):
+        # receive logic and update state
         self.received_content.append(content)
         self.state = DeviceState.RECEIVING
 
 
     def getStateString(self):
+        # return string of state
         if(self.state == DeviceState.IDLE): 
             return "IDLE"
         elif(self.state == DeviceState.SENDING): 

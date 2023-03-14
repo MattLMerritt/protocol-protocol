@@ -30,12 +30,16 @@ def add_state_to_json(world_devices, world_wires, global_time, all_states_dict):
     step_states = {}
 
     # add states of devices
+    id_counter = 0
     for i in world_devices.keys():
-        step_states["d-" + str(i)] = world_devices[i].getStateString()
+        step_states["d-" + str(id_counter)] = world_devices[i].getStateString()
+        id_counter = id_counter + 1
     
     # add states of wires
+    id_counter = 0
     for i in world_wires.keys():
-        step_states["w-" + str(i)] = world_wires[i].getStateString()
+        step_states["w-" + str(id_counter)] = world_wires[i].getStateString()
+        id_counter = id_counter + 1
     
     # add all of the devices and wires to the state index in the dictionary
     all_states_dict["step-" + str(global_time)] = step_states

@@ -26,18 +26,23 @@ import wire
 
 time_steps = 10
 
+def add_state_to_json(world_devices, world_wires, global_time, all_states_dict):
+    # create dictionary of each device and wire with their assoisated state
 
-def convert_states_into_json(world_devices, world_wires, global_time):
-    # format: key = id, value = state
+    step_states = {}
 
-    for wire_it in world_wires.items():
-            id = wire_it[0]
-            state = wire_it[1]
-            
-    for device_it in world_devices.values():
-        device_it.increment_time()
-
+    # add states of devices
+    for i in world_devices.keys():
+        step_states["d-" + str(i)] = world_devices[i].getStateString()
+    
+    # add states of wires
+    for i in world_wires.keys():
+        step_states["w-" + str(i)] = world_wires[i].getStateString()
+    
+    # add all of the devices and wires to the state index in the dictionary
+    all_states_dict["step-" + str(global_time)] = step_states
     pass
+
 
 
 if __name__ == "__main__":
@@ -61,6 +66,15 @@ if __name__ == "__main__":
 
 
 
+    # prepare export data for steps
+    # populate fields of data
+    export_data = {}
+    export_data["steps"] = 4
+    export_data["devices"] = len(world_devices)
+    export_data["wires"] = len(world_wires)
+
+
+
     # processing loop:
     for global_clock in range(0, time_steps):
         print("global_clock: " + str(global_clock))
@@ -80,7 +94,7 @@ if __name__ == "__main__":
             wire_it.updateState(global_clock)
 
         # save into format for graphing
-        convert_states_into_json(world_devices, world_wires, global_clock)
+        add_state_to_json(world_devices, world_wires, global_clock, export_data)
     
         # increment each device's local_clock
         for wire_it in world_wires.values():
@@ -88,3 +102,13 @@ if __name__ == "__main__":
         for device_it in world_devices.values():
             device_it.increment_time()
         print("\n")
+
+
+    
+
+
+    data_json = json.dumps(export_data, indent=4)
+    print(data_json)
+
+    with open("test.json", "w") as outfile:
+        outfile.write(data_json)

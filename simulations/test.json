@@ -1,0 +1,55 @@
+{
+    "steps": 4,
+    "devices": 2,
+    "wires": 1,
+    "step-0": {
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "w-1": "EMPTY"
+    },
+    "step-1": {
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "w-1": "EMPTY"
+    },
+    "step-2": {
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "w-1": "EMPTY"
+    },
+    "step-3": {
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "w-1": "EMPTY"
+    },
+    "step-4": {
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "w-1": "EMPTY"
+    },
+    "step-5": {
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "w-1": "EMPTY"
+    },
+    "step-6": {
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "w-1": "EMPTY"
+    },
+    "step-7": {
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "w-1": "EMPTY"
+    },
+    "step-8": {
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "w-1": "EMPTY"
+    },
+    "step-9": {
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "w-1": "EMPTY"
+    }
+}

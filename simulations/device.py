@@ -40,8 +40,19 @@ class Device():
             self.state = DeviceState.SENDING
 
 
-
     def receive(self, content):
         self.received_content.append(content)
         self.state = DeviceState.RECEIVING
 
+
+    def getStateString(self):
+        if(self.state == DeviceState.IDLE): 
+            return "IDLE"
+        elif(self.state == DeviceState.SENDING): 
+            return "SENDING"
+        elif(self.state == DeviceState.RECEIVING): 
+            return "RECEIVING"
+        elif(self.state == DeviceState.SENDING_AND_RECEIVING): 
+            return "SENDING_AND_RECEIVING"
+        else:
+            return "UNKNOWN-STATE"

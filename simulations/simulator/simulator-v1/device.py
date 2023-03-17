@@ -16,7 +16,8 @@ class DeviceState(Enum):
 
 
 class Device():
-    def __init__(self):
+    def __init__(self, id, name=""):
+        self.id = id
         self.local_time = 0
         self.state = DeviceState.IDLE
         # timed_sends is randomized used to emulate a "live" device 
@@ -27,11 +28,21 @@ class Device():
         # received_content is to keep track of what content has been received by the device
         self.received_content = []
 
+        self.name = name
+        if(name == ""):
+            self.name = "device " + str(id)
+
+
     def increment_time(self):
         # increment local time
         self.local_time = self.local_time + 1
         self.state = DeviceState.IDLE
 
+    def get_id(self):
+        return self.id
+
+    def get_name(self):
+        return self.name
 
     def send(self, wire, content):
         # send content to wire and update device state

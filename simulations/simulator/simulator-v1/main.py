@@ -45,6 +45,37 @@ def add_state_to_json(world_devices, world_wires, global_time, all_states_dict):
     all_states_dict["step-" + str(global_time)] = step_states
     pass
 
+def generate_initial_state_to_json(world_devices, world_wires):
+    # export inital data of wires and devices
+    export_init_data = {}
+    export_init_data["num-devices"] = len(world_devices)
+    export_init_data["num-wires"] = len(world_devices)
+
+    export_devices = {}
+
+    # create dictionary of each device and wire
+    for i in world_devices.keys():
+        export_devices["d-" + str(world_devices[i].get_id())] = {}
+        export_devices["d-" + str(world_devices[i].get_id())]["name"] = world_devices[i].get_name()
+
+    export_init_data["devices"] = export_devices
+    
+    export_wires = {}
+
+    # create dictionary of each device and wire
+    for i in world_wires.keys():
+        export_wires["w-" + str(world_wires[i].get_id())] = {}
+        export_wires["w-" + str(world_wires[i].get_id())]["send"] = "d-" + str(world_wires[i].get_send_device_id())
+        export_wires["w-" + str(world_wires[i].get_id())]["rec"] = "d-" + str(world_wires[i].get_rec_device_id())
+
+    export_init_data["devices"] = export_devices
+    export_init_data["wires"] = export_wires
+
+    # add this data to a json
+    data_json = json.dumps(export_init_data, indent=4)
+
+    with open("result.json", "w") as outfile:
+        outfile.write(data_json)
 
 
 if __name__ == "__main__":
@@ -64,15 +95,15 @@ if __name__ == "__main__":
     time_steps = 10
     world_devices = {}
     world_wires = {}
-    D1 = Device()
-    D2 = Device()
+    D1 = Device(1)
+    D2 = Device(2)
     world_devices[1] = D1
     world_devices[2] = D2
 
-    w1 = Wire(1, 2, world_devices, 1)
+    w1 = Wire(1, 1, 2, world_devices, 1)
+    w2 = Wire(2, 2, 1, world_devices, 2)
     world_wires[1] = w1
-
-
+    world_wires[2] = w2
 
     # prepare export data for steps
     # populate fields of data
@@ -81,7 +112,7 @@ if __name__ == "__main__":
     export_data["devices"] = len(world_devices)
     export_data["wires"] = len(world_wires)
 
-
+    generate_initial_state_to_json(world_devices, world_wires)
 
     # processing loop:
     for global_clock in range(0, time_steps):
@@ -105,7 +136,7 @@ if __name__ == "__main__":
 
         # save into format for graphing
         add_state_to_json(world_devices, world_wires, global_clock, export_data)
-    
+
         # increment each device's local_clock
         for wire_it in world_wires.values():
             wire_it.increment_time()

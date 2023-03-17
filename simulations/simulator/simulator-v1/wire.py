@@ -20,7 +20,8 @@ class WireState(Enum):
     IN_USE = 1
 
 class Wire():
-    def __init__(self, from_id, to_id, world_devices, wire_delay = 0):
+    def __init__(self, id, from_id, to_id, world_devices, wire_delay = 0):
+        self.id = id
         self.local_time = 0
         self.state = WireState.EMPTY
         self.time_and_data = {}
@@ -29,6 +30,15 @@ class Wire():
         self.rec_device_id = to_id
         self.world_devices = world_devices
         self.wire_delay = wire_delay + 1 # wire delay arg must be non-zero
+
+    def get_id(self) -> int:
+        return self.id
+
+    def get_send_device_id(self) -> int:
+        return self.send_device_id
+    
+    def get_rec_device_id(self) -> int:
+        return self.rec_device_id
 
     def increment_time(self):
         # increment local time

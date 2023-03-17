@@ -1,5 +1,5 @@
 {
-    "steps": 10,
+    "steps": 6,
     "devices": 2,
     "wires": 1,
     "step-0": {
@@ -28,26 +28,6 @@
         "w-0": "IN_USE"
     },
     "step-5": {
-        "d-0": "IDLE",
-        "d-1": "IDLE",
-        "w-0": "EMPTY"
-    },
-    "step-6": {
-        "d-0": "IDLE",
-        "d-1": "IDLE",
-        "w-0": "EMPTY"
-    },
-    "step-7": {
-        "d-0": "IDLE",
-        "d-1": "IDLE",
-        "w-0": "EMPTY"
-    },
-    "step-8": {
-        "d-0": "IDLE",
-        "d-1": "IDLE",
-        "w-0": "EMPTY"
-    },
-    "step-9": {
         "d-0": "IDLE",
         "d-1": "IDLE",
         "w-0": "EMPTY"

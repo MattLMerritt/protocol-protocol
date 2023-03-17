@@ -53,9 +53,17 @@ class Wire():
             if val > (global_time-1):
                 self.state = WireState.IN_USE
             
-    def getStateString(self):
+    def getStateString(self, global_time):
         # return string of state
+        res = {}
         if(self.state == WireState.EMPTY):
-            return "EMPTY"
+            res["STATE"] = "EMPTY"
+            res["DATA"] = ""
         else:
-            return "IN_USE"
+            res["STATE"] = "IN_USE"
+            message = ""
+            for it in self.time_and_data.items():
+                if (it[0] >= global_time):
+                    message += it[1]
+            res["DATA"] = message
+        return res

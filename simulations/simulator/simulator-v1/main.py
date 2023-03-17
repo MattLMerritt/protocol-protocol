@@ -38,7 +38,7 @@ def add_state_to_json(world_devices, world_wires, global_time, all_states_dict):
     # add states of wires
     id_counter = 0
     for i in world_wires.keys():
-        step_states["w-" + str(id_counter)] = world_wires[i].getStateString()
+        step_states["w-" + str(id_counter)] = world_wires[i].getStateString(global_time)
         id_counter = id_counter + 1
     
     # add all of the devices and wires to the state index in the dictionary
@@ -49,7 +49,7 @@ def add_state_to_json(world_devices, world_wires, global_time, all_states_dict):
 
 if __name__ == "__main__":
 
-    print("hello world")
+    print("version 1.0")
 
     '''
     Example 
@@ -85,7 +85,7 @@ if __name__ == "__main__":
 
     # processing loop:
     for global_clock in range(0, time_steps):
-        print("global_clock: " + str(global_clock))
+        print("global_clock:", global_clock)
 
         # process each wire
         for wire_it in world_wires.values():

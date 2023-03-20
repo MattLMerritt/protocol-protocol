@@ -1,0 +1,11 @@
+{
+  "name": "protocol-protocol",
+  "version": "1.0.0",
+  "description": "A central repository for information about all types of protocols from electronics, to networks, and more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Merritt",
+  "license": "MIT"
+}

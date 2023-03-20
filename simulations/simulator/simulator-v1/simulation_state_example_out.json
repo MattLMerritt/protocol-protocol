@@ -1,0 +1,63 @@
+{
+    "steps" : 4,
+    "0": [
+        {
+            "devices": [
+                {
+                    "1": "IDLE",
+                    "2": "IDLE"
+                }
+            ],
+            "wires": [
+                {
+                    "1": "EMPTY"
+                }
+            ]
+        }
+    ],
+    "1": [
+        {
+            "devices": [
+                {
+                    "1": "SENDING",
+                    "2": "IDLE"
+                }
+            ],
+            "wires": [
+                {
+                    "1": "EMPTY"
+                }
+            ]
+        }
+    ],
+    "2": [
+        {
+            "devices": [
+                {
+                    "1": "IDLE",
+                    "2": "IDLE"
+                }
+            ],
+            "wires": [
+                {
+                    "1": "IN-USE"
+                }
+            ]
+        }
+    ],
+    "3": [
+        {
+            "devices": [
+                {
+                    "1": "IDLE",
+                    "2": "RECEIVING"
+                }
+            ],
+            "wires": [
+                {
+                    "1": "EMPTY"
+                }
+            ]
+        }
+    ]
+}

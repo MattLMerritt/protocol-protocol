@@ -1,0 +1,13 @@
+from pyvis import network as net
+import networkx as nx
+from IPython.core.display import display, HTML
+
+g = net.Network(notebook=True, cdn_resources='remote')
+
+g.add_node(1, label="Device 1") # node id = 1 and label = Node 1
+g.add_node(2, label="Device 2") # node id = 1 and label = Node 1
+
+g.add_edge(1, 2)
+
+g.show("display.html")
+display(HTML("display.html"))

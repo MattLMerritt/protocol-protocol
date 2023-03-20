@@ -1,0 +1,65 @@
+{
+    "steps": 10,
+    "devices": 2,
+    "wires": 2,
+    "step-0": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": "EMPTY",
+        "w-1": "EMPTY"
+    },
+    "step-1": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": "EMPTY",
+        "w-1": "EMPTY"
+    },
+    "step-2": {
+        "d-0": "SENDING",
+        "d-1": "IDLE",
+        "w-0": "IN_USE",
+        "w-1": "EMPTY"
+    },
+    "step-3": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": "IN_USE",
+        "w-1": "EMPTY"
+    },
+    "step-4": {
+        "d-0": "IDLE",
+        "d-1": "RECEIVING",
+        "w-0": "IN_USE",
+        "w-1": "EMPTY"
+    },
+    "step-5": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": "EMPTY",
+        "w-1": "EMPTY"
+    },
+    "step-6": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": "EMPTY",
+        "w-1": "EMPTY"
+    },
+    "step-7": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": "EMPTY",
+        "w-1": "EMPTY"
+    },
+    "step-8": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": "EMPTY",
+        "w-1": "EMPTY"
+    },
+    "step-9": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": "EMPTY",
+        "w-1": "EMPTY"
+    }
+}

@@ -77,7 +77,19 @@ def generate_initial_state_to_json(world_devices, world_wires):
     with open("result.json", "w") as outfile:
         outfile.write(data_json)
 
-
+'''
+Program main: 
+    a simple simulation and recording of how message passing happens among devices
+Critical steps in the main function: 
+    1. Create some devices as well as some wires to connect them. 
+    2. Define the number of steps the simulation would have.
+    3. Each iteration of the main loop represents its corresponding step.
+        In each step, there are several different events that may occur:
+            - A transmitter is trying to send a message to a receiver
+            - A wire is passing a message from a transmitter to a receiver
+            - A receive receive a message
+    4. Record each step to a json file in order to show the whole process on the website. 
+'''
 if __name__ == "__main__":
 
     print("version 1.0")

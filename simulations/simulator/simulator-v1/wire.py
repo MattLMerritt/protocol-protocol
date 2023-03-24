@@ -74,6 +74,6 @@ class Wire():
             message = ""
             for it in self.time_and_data.items():
                 if (it[0] >= global_time):
-                    message += it[1]
-            res["DATA"] = message
+                    message += '(' + it[1] + ') '
+            res["DATA"] = message.strip()
         return res

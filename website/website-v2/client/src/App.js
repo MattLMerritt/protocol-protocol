@@ -1,9 +1,32 @@
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+import "./styles/App.scss";
+
+const Layout = () => {
+  return (
+    <>
+      <Sidebar />
+    </>
+  );
+};
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <div>
+        <Layout />
+      </div>
+    ),
+  },
+]);
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Hello World</p>
-      </header>
+    <div className="app">
+      <div className="app_container">
+        <RouterProvider router={router} />
+      </div>
     </div>
   );
 }

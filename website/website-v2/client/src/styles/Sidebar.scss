@@ -1,0 +1,50 @@
+$sidebar_bg: #e8e6e4;
+$sidebar_border: #d9d6d5;
+$link_activate: #f64740;
+
+.sidebar {
+  width: 350px;
+  height: 100vh;
+  padding: 20px 20px;
+  //display: flex;
+  font: 26px/32px BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif;
+
+  background: $sidebar_bg;
+  border: 1px solid $sidebar_border;
+
+  .sidebar_content {
+    .section_title {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .outer_list_item {
+      list-style-type: none;
+
+      .link {
+        text-decoration: underline;
+        &:hover {
+          color: $link_activate;
+          text-decoration-color: $link_activate;
+        }
+      }
+    }
+
+    .inner_list {
+      list-style-type: none;
+      list-style-position: inside;
+    }
+    .inner_list_item {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      padding-left: 40px;
+
+      .link {
+        text-decoration: none;
+      }
+    }
+    ul {
+    }
+  }
+}

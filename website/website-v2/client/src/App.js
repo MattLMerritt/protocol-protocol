@@ -5,6 +5,7 @@ import "./styles/App.scss";
 const Layout = () => {
   return (
     <>
+      <NavBar />
       <Sidebar />
     </>
   );

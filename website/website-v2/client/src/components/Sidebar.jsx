@@ -7,12 +7,11 @@ import rcos_logo_red from "../imgs/rcos_logo_red.png";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      Sidebar
       <div className="sidebar_content">
         <div className="section">
           <div className="section_title">
             <Link className="link">
-              <h3>section_title</h3>
+              <h3>Protocol Navigation</h3>
             </Link>
           </div>
           <div className="outer_list">
@@ -37,12 +36,27 @@ const Sidebar = () => {
             </ul>
           </div>
         </div>
-        <div className="section">
-          <div className="section_title">
-            <h3>section_title2</h3>
+        <div className="section share">
+          <div
+            className="section_title"
+            style={{
+              color: "#908e8d",
+              fontWeight: 500,
+              margin: "0 0 12px",
+              paddingLeft: 20,
+            }}
+          >
+            Share
           </div>
-          {/* <img src={github_logo} alt="" />
-          <img src={rcos_logo_red} alt="" /> */}
+          <Link
+            className="link"
+            to="https://github.com/MattLMerritt/protocol-protocol"
+          >
+            <img src={github_logo} alt="" />
+          </Link>
+          <Link className="link" to="https://rcos.io/">
+            <img src={rcos_logo_red} alt="" />
+          </Link>
         </div>
       </div>
     </div>

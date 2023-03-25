@@ -1,4 +1,10 @@
 .app {
+  font: 26px/32px BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif;
+  display: block;
+  flex-direction: row;
+  justify-content: flex-end;
+
   .app_container {
     .link {
       text-decoration: none;

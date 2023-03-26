@@ -20,6 +20,8 @@ class Wake(Device):
         super().__init__(id, name)
         self.awake = False
         self.wires = wires
+        if(name == "device " + str(id)):
+            self.name = "wakeup device " + str(id)
 
     def wakeup(self):
         self.awake = True

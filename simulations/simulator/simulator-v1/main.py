@@ -1,4 +1,5 @@
 from simulation import Simulator
+from generate_json import GenerateJson
 from device import Device
 from wire import Wire
 
@@ -29,7 +30,11 @@ if __name__ == "__main__":
     world_wires[1] = w1
     world_wires[2] = w2
 
-    sim = Simulator(time_steps, world_devices, world_wires)
+    # export data
+    gen_json = GenerateJson(time_steps, world_devices, world_wires)
+    gen_json.generate_initial_state_to_json()
+
+    # simulate data
+    sim = Simulator(time_steps, world_devices, world_wires, gen_json)
     sim.simulate()
 
-    

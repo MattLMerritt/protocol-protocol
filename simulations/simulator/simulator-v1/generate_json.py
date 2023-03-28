@@ -12,7 +12,8 @@ class GenerateJson:
         self.data["steps"] = total_time
         self.data["devices"] = len(world_devices)
         self.data["wires"] = len(world_wires)
-        self.generate_initial_state_to_json(world_devices, world_wires, initial_filename)
+        self.world_devices = world_devices
+        self.world_wires = world_wires
 
     def add_state_to_json(self, world_devices, world_wires, global_time):
         # create dictionary of each device and wire with their assoisated state
@@ -35,28 +36,28 @@ class GenerateJson:
         self.data["step-" + str(global_time)] = step_states
         pass
 
-    def generate_initial_state_to_json(self, world_devices, world_wires, filename="initial.json"):
+    def generate_initial_state_to_json(self, filename="initial.json"):
         # export inital data of wires and devices
         export_init_data = {}
-        export_init_data["num-devices"] = len(world_devices)
-        export_init_data["num-wires"] = len(world_devices)
+        export_init_data["num-devices"] = len(self.world_devices)
+        export_init_data["num-wires"] = len(self.world_devices)
 
         export_devices = {}
 
         # create dictionary of each device and wire
-        for i in world_devices.keys():
-            export_devices["d-" + str(world_devices[i].get_id())] = {}
-            export_devices["d-" + str(world_devices[i].get_id())]["name"] = world_devices[i].get_name()
+        for i in self.world_devices.keys():
+            export_devices["d-" + str(self.world_devices[i].get_id())] = {}
+            export_devices["d-" + str(self.world_devices[i].get_id())]["name"] = self.world_devices[i].get_name()
 
         export_init_data["devices"] = export_devices
         
         export_wires = {}
 
         # create dictionary of each device and wire
-        for i in world_wires.keys():
-            export_wires["w-" + str(world_wires[i].get_id())] = {}
-            export_wires["w-" + str(world_wires[i].get_id())]["send"] = "d-" + str(world_wires[i].get_send_device_id())
-            export_wires["w-" + str(world_wires[i].get_id())]["rec"] = "d-" + str(world_wires[i].get_rec_device_id())
+        for i in self.world_wires.keys():
+            export_wires["w-" + str(self.world_wires[i].get_id())] = {}
+            export_wires["w-" + str(self.world_wires[i].get_id())]["send"] = "d-" + str(self.world_wires[i].get_send_device_id())
+            export_wires["w-" + str(self.world_wires[i].get_id())]["rec"] = "d-" + str(self.world_wires[i].get_rec_device_id())
 
         export_init_data["devices"] = export_devices
         export_init_data["wires"] = export_wires

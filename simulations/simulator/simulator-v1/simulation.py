@@ -36,17 +36,13 @@ Critical steps in the main function:
             - A receive receive a message
     4. Record each step to a json file in order to show the whole process on the website. 
 '''
-
 class Simulator:
     
-    def __init__(self, total_time, devices, wires):
+    def __init__(self, total_time, devices, wires, gen_json = None):
         self.total_time = total_time
         self.devices = devices
         self.wires = wires
-
-        # export data
-        self.gen_json = GenerateJson(total_time, devices, wires)
-        
+        self.gen_json = gen_json    
 
     def process(self, time):
         # process each wire
@@ -58,7 +54,8 @@ class Simulator:
             wire_it.updateState(time)
 
         # save into format for graphing
-        self.gen_json.add_state_to_json(self.devices, self.wires, time)
+        if self.gen_json is not None:
+            self.gen_json.add_state_to_json(self.devices, self.wires, time)
 
         # increment each device's local_clock
         for wire_it in self.wires.values():
@@ -79,7 +76,8 @@ class Simulator:
             #    pass
         
         # exporting data
-        self.gen_json.export_data_to_json()        
+        if self.gen_json is not None:
+            self.gen_json.export_data_to_json()        
 
             
 

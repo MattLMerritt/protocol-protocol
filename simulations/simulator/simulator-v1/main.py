@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     # export data
     gen_json = GenerateJson(time_steps, world_devices, world_wires)
-    gen_json.generate_initial_state_to_json()
+    gen_json.export_input_data_to_json()
 
     # simulate data
     sim = Simulator(time_steps, world_devices, world_wires, gen_json)

@@ -42,6 +42,7 @@ class Simulator:
     def __init__(self, total_time, world_devices, world_wires):
         # export data
         self.gen_json = GenerateJson(total_time, world_devices=world_devices, world_wires=world_wires)
+        self.total_time = total_time
 
     def process(self, time):
         # process each wire

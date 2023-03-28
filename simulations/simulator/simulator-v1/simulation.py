@@ -39,4 +39,45 @@ Critical steps in the main function:
 
 class Simulator:
     
-    def __init__(self, total_time)
+    def __init__(self, total_time, world_devices, world_wires):
+        # export data
+        self.gen_json = GenerateJson(total_time, world_devices=world_devices, world_wires=world_wires)
+
+    def process(self, time):
+        # process each wire
+        for wire_it in self.world_wires.values():
+            wire_it.process(time)
+        
+        # update wire state info
+        for wire_it in self.world_wires.values():
+            wire_it.updateState(time)
+
+        # increment each device's local_clock
+        for wire_it in self.world_wires.values():
+            wire_it.increment_time()
+        for device_it in self.world_devices.values():
+            device_it.increment_time()
+
+        # save into format for graphing
+        self.gen_json.add_state_to_json(self.world_devices, self.world_wires, time)
+
+    def simulate(self):
+        # processing loop:
+        for global_clock in range(0, self.total_time):
+            self.process(global_clock)
+
+            # allow for sends from devices
+            # special logic for example:
+            #if(global_clock == 2):
+            #    self.world_devices[1].send(self.world_wires[1], "hello world")
+            #for device_it in self.world_devices.values():
+            #    pass
+        
+        # exporting data
+        self.gen_json.export_data_to_json()        
+
+            
+
+            
+
+            

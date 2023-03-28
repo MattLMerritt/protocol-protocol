@@ -60,7 +60,7 @@ class GenerateJson:
         export_init_data["links"] = export_wires
 
         # add this data to a json
-        data_json = json.dumps(export_init_data, indent=4, separators=('\n', ''))
+        data_json = json.dumps(export_init_data, indent=4)
 
         with open(filename, "w") as outfile:
             outfile.write(data_json)

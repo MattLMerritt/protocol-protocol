@@ -1,10 +1,12 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
 import "./styles/App.scss";
 
 const Layout = () => {
   return (
     <>
+      <Navbar />
       <Sidebar />
     </>
   );

@@ -36,34 +36,31 @@ class GenerateJson:
         self.data["step-" + str(global_time)] = step_states
         pass
 
-    def generate_initial_state_to_json(self, filename="initial.json"):
+    def export_input_data_to_json(self, filename="input.json"):
         # export inital data of wires and devices
         export_init_data = {}
-        export_init_data["num-devices"] = len(self.world_devices)
-        export_init_data["num-wires"] = len(self.world_devices)
-
-        export_devices = {}
+        export_devices = [None] * len(self.world_devices)
+        export_wires = [None] * len(self.world_wires)
 
         # create dictionary of each device and wire
         for i in self.world_devices.keys():
-            export_devices["d-" + str(self.world_devices[i].get_id())] = {}
-            export_devices["d-" + str(self.world_devices[i].get_id())]["name"] = self.world_devices[i].get_name()
+            export_devices[i] = {}
+            export_devices[i]["id"] = "d-" + str(self.world_devices[i].get_id())
+            export_devices[i]["group"] = i
 
-        export_init_data["devices"] = export_devices
-        
-        export_wires = {}
+        export_init_data["nodes"] = export_devices
 
         # create dictionary of each device and wire
         for i in self.world_wires.keys():
-            export_wires["w-" + str(self.world_wires[i].get_id())] = {}
-            export_wires["w-" + str(self.world_wires[i].get_id())]["send"] = "d-" + str(self.world_wires[i].get_send_device_id())
-            export_wires["w-" + str(self.world_wires[i].get_id())]["rec"] = "d-" + str(self.world_wires[i].get_rec_device_id())
+            export_wires[i] = {}
+            export_wires[i]["source"] = "d-" + str(self.world_wires[i].get_send_device_id())
+            export_wires[i]["target"] = "d-" + str(self.world_wires[i].get_rec_device_id())
+            export_wires[i]["value"] = 1
 
-        export_init_data["devices"] = export_devices
-        export_init_data["wires"] = export_wires
+        export_init_data["links"] = export_wires
 
         # add this data to a json
-        data_json = json.dumps(export_init_data, indent=4)
+        data_json = json.dumps(export_init_data, indent=4, separators=('\n', ''))
 
         with open(filename, "w") as outfile:
             outfile.write(data_json)

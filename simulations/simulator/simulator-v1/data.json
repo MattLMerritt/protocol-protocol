@@ -1,0 +1,125 @@
+{
+    "steps": 10,
+    "devices": 2,
+    "wires": 2,
+    "step-0": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-1": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-2": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-3": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-4": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-5": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-6": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-7": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-8": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-9": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    }
+}

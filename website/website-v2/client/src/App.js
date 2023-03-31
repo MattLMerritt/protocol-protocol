@@ -5,10 +5,10 @@ import "./styles/App.scss";
 
 const Layout = () => {
   return (
-    <>
+    <div>
       <Sidebar />
       <Outlet />
-    </>
+    </div>
   );
 };
 

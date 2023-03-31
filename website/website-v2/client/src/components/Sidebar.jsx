@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../styles/Sidebar.scss";
 import github_logo from "../imgs/github_logo.png";
 import rcos_logo_red from "../imgs/rcos_logo_red.png";
+import { HashLink } from "react-router-hash-link";
 
 const Sidebar = () => {
   return (
@@ -19,16 +20,44 @@ const Sidebar = () => {
               <li className="outer_list_item">
                 <details>
                   <summary>
-                    <Link className="link">Protocol 1</Link>
+                    <Link className="link" to="/Uart">
+                      UART
+                    </Link>
                   </summary>
                   <ul className="inner_list">
                     <li className="inner_list_item">
                       {" "}
-                      <Link className="link"> Description</Link>
+                      <HashLink className="link" to="/Uart/#description">
+                        {" "}
+                        Description
+                      </HashLink>
                     </li>
                     <li className="inner_list_item">
                       {" "}
-                      <Link className="link"> Example</Link>
+                      <HashLink className="link" to="/Uart/#examples">
+                        {" "}
+                        Examples
+                      </HashLink>
+                    </li>
+                    <li className="inner_list_item">
+                      {" "}
+                      <HashLink className="link" to="/Uart/#instructions">
+                        {" "}
+                        Instructions
+                      </HashLink>
+                    </li>
+                  </ul>
+                </details>
+              </li>
+              <li className="outer_list_item">
+                <details>
+                  <summary>
+                    <Link className="link">Protocol 2</Link>
+                  </summary>
+                  <ul className="inner_list">
+                    <li className="inner_list_item">
+                      {" "}
+                      <HashLink className="link"> inner_list_item</HashLink>
                     </li>
                   </ul>
                 </details>

@@ -20,13 +20,19 @@ $link_activate: #f64740;
     }
 
     .share {
+      width: 80%;
       position: absolute;
-      bottom: 0;
+      bottom: 10%;
+
+      .section_title {
+        //text-align: center;
+      }
+
       img {
         //margin: 8px 20px;
         padding: 22px 20px;
-        padding-left: 10px;
-        height: 75px;
+        padding-left: 20px;
+        height: 125px;
       }
     }
 

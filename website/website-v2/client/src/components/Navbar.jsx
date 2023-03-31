@@ -30,8 +30,7 @@ function Navbar () {
         <FaBars/>
       </button>
     </header>
-  );
-  
+  );  
 };
 
 export default Navbar;

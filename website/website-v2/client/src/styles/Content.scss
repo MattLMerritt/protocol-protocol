@@ -1,10 +1,14 @@
 .container {
-  padding-left: 600px;
+  width: 70%;
+  overflow: scroll;
   background-color: white;
-  height: 92.5vh;
+
   line-height: 1.5;
-  padding-right: 250px;
-  margin-left: auto;
+
+  .content {
+    padding: 250px;
+    padding-top: 50px;
+  }
 }
 
 h1,

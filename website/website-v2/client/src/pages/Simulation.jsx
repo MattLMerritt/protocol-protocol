@@ -4,7 +4,9 @@ import "../styles/Content.scss";
 const Simulation = () => {
   return (
     <div className="container">
-      <div>Simulation</div>{" "}
+      <div className="content">
+        <div>Simulation</div>{" "}
+      </div>
     </div>
   );
 };

@@ -11,11 +11,13 @@ import ContactUs from "./pages/ContactUs";
 
 const Layout = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <Sidebar />
-      <Outlet />
-    </div>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <Sidebar />
+        <Outlet />
+      </div>
+    </>
   );
 };
 

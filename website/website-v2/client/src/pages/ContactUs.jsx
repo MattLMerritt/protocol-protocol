@@ -4,7 +4,9 @@ import "../styles/Content.scss";
 const ContactUs = () => {
   return (
     <div className="container">
-      <div>ContactUs</div>{" "}
+      <div className="content">
+        <div>ContactUs</div>{" "}
+      </div>
     </div>
   );
 };

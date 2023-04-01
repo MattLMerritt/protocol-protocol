@@ -4,7 +4,7 @@ import "../styles/Content.scss";
 const Home = () => {
   return (
     <div className="container">
-      <div style={{ paddingTop: 50 }}>
+      <div className="content">
         <h1>Project Protocol Protocol</h1>
         <h2>Description</h2>
         <blockquote>
@@ -44,6 +44,7 @@ const Home = () => {
           to learn more.
         </p>
         <h2>License</h2>
+        <p>MIT</p>
       </div>
     </div>
   );

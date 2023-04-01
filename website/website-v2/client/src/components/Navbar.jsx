@@ -1,36 +1,45 @@
 import React from "react";
-import {useRef} from "react"
-import {FaBars, FaTimes} from "react-icons/fa"
+import { Link } from "react-router-dom";
+import { useRef } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import protlogo from "../imgs/protlogo.png";
-import "../styles/Navbar.css"
+import "../styles/Navbar.css";
 
-function Navbar () {
-
-
+function Navbar() {
   const navRef = useRef();
 
-  const showNavBar = () =>  {
+  const showNavBar = () => {
     navRef.current.classList.toggle("responsive_nav");
-  }
+  };
 
-  return( 
+  return (
     <header>
-       <h3>
-        <img src={protlogo} alt="" style={{ width: '100px', height: '110px' }} />
-      </h3>
+      <Link className="link" to="/">
+        <h3>
+          <img
+            src={protlogo}
+            alt=""
+            style={{ width: "100px", height: "110px" }}
+          />
+        </h3>
+      </Link>
       <nav ref={navRef}>
-        <a href="/#">Contact Us</a>
+        <Link className="link" to="/contact-us">
+          Contact Us
+        </Link>
         <a href="/#">About</a>
-        <a href="/#">Simulation</a>
-        <button className = "nav-btn nav-close-btn" onClick={showNavBar}>
-          <FaTimes/>
+        <Link className="link" to="/Simulation">
+          Simulation
+        </Link>
+        <button className="nav-btn nav-close-btn" onClick={showNavBar}>
+          <FaTimes />
         </button>
       </nav>
-      <button className = "nav-btn" onClick={showNavBar}>
-        <FaBars/>
+      <button className="nav-btn" onClick={showNavBar}>
+        <FaBars />
       </button>
     </header>
-  );  
-};
+  );
+}
 
 export default Navbar;

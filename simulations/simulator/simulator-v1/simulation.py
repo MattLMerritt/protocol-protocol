@@ -74,6 +74,8 @@ class Simulator:
             #    self.world_devices[1].send(self.world_wires[1], "hello world")
             #for device_it in self.world_devices.values():
             #    pass
+            if global_clock == 1:
+                self.devices[0].wakeup("hi")
         
         # exporting data
         if self.gen_json is not None:

@@ -67,6 +67,7 @@ class Simulator:
         # processing loop:
         for global_clock in range(0, self.total_time):
             self.process(global_clock)
+            self.trigger_event(global_clock)
 
             # allow for sends from devices
             # special logic for example:
@@ -79,10 +80,6 @@ class Simulator:
         
         # exporting data
         if self.gen_json is not None:
-            self.gen_json.export_data_to_json()        
-
-            
-
-            
-
+            self.gen_json.export_data_to_json()
+        
             

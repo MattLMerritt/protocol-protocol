@@ -55,7 +55,7 @@ class GenerateJson:
             export_wires[i] = {}
             export_wires[i]["source"] = "d-" + str(self.world_wires[i].get_send_device_id())
             export_wires[i]["target"] = "d-" + str(self.world_wires[i].get_rec_device_id())
-            export_wires[i]["value"] = 1
+            export_wires[i]["value"] = self.world_wires[i].get_delay()
 
         export_init_data["links"] = export_wires
 

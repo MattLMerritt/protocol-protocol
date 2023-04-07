@@ -39,6 +39,9 @@ class Wire():
     
     def get_rec_device_id(self) -> int:
         return self.rec_device_id
+    
+    def get_delay(self) -> int:
+        return self.wire_delay
 
     def increment_time(self):
         # increment local time

@@ -1,5 +1,6 @@
 .container {
   background-color: white;
+  height: 100vh;
   line-height: 1.5;
   .content {
     padding: 10%;
@@ -78,9 +79,8 @@
 
 }
 
-
-.header-size{
-  font-size: 29px;
+.header-size {
+  font-size: 27px;
   margin-top: 0; /* Adjust this value as desired */
   padding-top: 0; /* Adjust this value as desired */
   text-align: left;
@@ -89,38 +89,5 @@
 
 
 .subheader-size{
-  font-size: 20px;
-  text-align: left;
-
-}
-
-.contact-us{
-  padding: 250px;
-  padding-top: 50px;
-  font-size: 45px;
-  text-align: center;
-  text-decoration: underline;
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  padding-right: 30%;
-
-  align-items: center;
-}
-
-.contact-info{
-  font-size: 20px;
-}
-
-.content-container {
-  display: flex;
-  align-items: center; /* Adjusts vertical alignment */
-  margin-top: -225px; /* Adjust this value as desired */
-
-}
-
-.text-container {
-  margin-left: 200px; /* Adjusts the space between the image and the text */
+  font-size: 24px;
 }

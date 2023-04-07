@@ -1,5 +1,6 @@
 from device import Device, DeviceState
 from wire import Wire
+import random
 
 # Gotcha, a better starting place would be a waking up protocol - typing it out rn
 # Wake func: if not awake, sent awake variable true and message to wake message to neighbors
@@ -15,27 +16,23 @@ from wire import Wire
 #class WakeState(DeviceState):
 
 def init_wakeup():
-    wires = {}
-    devices = {}
-
-    wires_inc_device_info = {}
     
-    for i in range(5):
-        devices[i] = WakeupDevice(i)
-    
-    wires[0] = Wire(0, 0, 1, devices, 1)
-    #wires_inc_device_info[0] = {0, 1, wires[0]}
-    wires[1] = Wire(1, 1, 2, devices, 2)
-    #wires_inc_device_info[1] = {1, 2, wires[1]}
-    wires[2] = Wire(2, 1, 3, devices, 5)
-    #wires_inc_device_info[2] = {1, 3, wires[2]}
-    wires[3] = Wire(3, 2, 4, devices, 1)
-    #wires_inc_device_info[3] = {2, 4, wires[3]}
-    wires[4] = Wire(4, 3, 5, devices, 1)
-    #wires_inc_device_info[4] = {3, 5, wires[4]}
+    devices, wires = randomized_devices_and_wires(100, 1000)
 
     add_wires_to_all_devices(devices, wires)
 
+    return devices, wires
+
+def randomized_devices_and_wires(num_devices, num_wires, seed = 42):
+    wires = {}
+    devices = {}
+
+    for i in range(num_devices):
+        devices[i] = WakeupDevice(i)
+    
+    for i in range(num_wires):
+        wires[i] = Wire(i, random.randint(0, num_devices), random.randint(0, num_devices), devices, random.randint(0, 10))
+    
     return devices, wires
 
 def add_wires_to_all_devices(devices, wires):

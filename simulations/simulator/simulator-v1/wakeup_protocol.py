@@ -17,7 +17,7 @@ import random
 
 def init_wakeup():
     
-    devices, wires = randomized_devices_and_wires(2, 2)
+    devices, wires = randomized_devices_and_wires(50, 100)
 
     add_wires_to_all_devices(devices, wires)
 

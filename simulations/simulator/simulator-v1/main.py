@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     
     '''
-    time_steps = 1000
+    time_steps = 100
     
     world_devices, world_wires = init_wakeup()
 
@@ -29,7 +29,7 @@ if __name__ == "__main__":
 
     # export data
     gen_json = GenerateJson(time_steps, world_devices, world_wires)
-    gen_json.generate_initial_state_to_json()
+    gen_json.export_input_data_to_json()
 
     # simulate data
     sim = Simulator(time_steps, world_devices, world_wires, events, gen_json)

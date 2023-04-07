@@ -1,21 +1,12 @@
 {
-    "num-devices": 5,
-    "num-wires": 5,
+    "num-devices": 2,
+    "num-wires": 2,
     "devices": {
         "d-0": {
             "name": "device 0"
         },
         "d-1": {
             "name": "device 1"
-        },
-        "d-2": {
-            "name": "device 2"
-        },
-        "d-3": {
-            "name": "device 3"
-        },
-        "d-4": {
-            "name": "device 4"
         }
     },
     "wires": {
@@ -24,20 +15,8 @@
             "rec": "d-1"
         },
         "w-1": {
-            "send": "d-1",
-            "rec": "d-2"
-        },
-        "w-2": {
-            "send": "d-1",
-            "rec": "d-3"
-        },
-        "w-3": {
             "send": "d-2",
-            "rec": "d-4"
-        },
-        "w-4": {
-            "send": "d-3",
-            "rec": "d-5"
+            "rec": "d-1"
         }
     }
 }

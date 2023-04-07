@@ -38,11 +38,12 @@ Critical steps in the main function:
 '''
 class Simulator:
     
-    def __init__(self, total_time, devices, wires, gen_json = None):
+    def __init__(self, total_time, devices, wires, events, gen_json = None):
         self.total_time = total_time
         self.devices = devices
         self.wires = wires
-        self.gen_json = gen_json    
+        self.gen_json = gen_json
+        self.events = events
 
     def process(self, time):
         # process each wire
@@ -67,20 +68,10 @@ class Simulator:
         # processing loop:
         for global_clock in range(0, self.total_time):
             self.process(global_clock)
-
-            # allow for sends from devices
-            # special logic for example:
-            #if(global_clock == 2):
-            #    self.world_devices[1].send(self.world_wires[1], "hello world")
-            #for device_it in self.world_devices.values():
-            #    pass
+            self.events.trigger_events(global_clock)
         
         # exporting data
         if self.gen_json is not None:
-            self.gen_json.export_data_to_json()        
-
-            
-
-            
-
+            self.gen_json.export_data_to_json()
+        
             

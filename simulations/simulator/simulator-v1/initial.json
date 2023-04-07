@@ -2,19 +2,19 @@
     "num-devices": 2,
     "num-wires": 2,
     "devices": {
+        "d-0": {
+            "name": "device 0"
+        },
         "d-1": {
             "name": "device 1"
-        },
-        "d-2": {
-            "name": "device 2"
         }
     },
     "wires": {
-        "w-1": {
-            "send": "d-1",
-            "rec": "d-2"
+        "w-0": {
+            "send": "d-0",
+            "rec": "d-1"
         },
-        "w-2": {
+        "w-1": {
             "send": "d-2",
             "rec": "d-1"
         }

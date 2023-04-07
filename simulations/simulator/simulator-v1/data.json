@@ -1,5 +1,5 @@
 {
-    "steps": 12,
+    "steps": 13,
     "devices": 5,
     "wires": 5,
     "step-0": {
@@ -57,14 +57,14 @@
         }
     },
     "step-2": {
-        "d-0": "SENDING",
+        "d-0": "IDLE",
         "d-1": "IDLE",
         "d-2": "IDLE",
         "d-3": "IDLE",
         "d-4": "IDLE",
         "w-0": {
-            "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "STATE": "EMPTY",
+            "DATA": ""
         },
         "w-1": {
             "STATE": "EMPTY",
@@ -84,14 +84,14 @@
         }
     },
     "step-3": {
-        "d-0": "IDLE",
+        "d-0": "SENDING",
         "d-1": "IDLE",
         "d-2": "IDLE",
         "d-3": "IDLE",
         "d-4": "IDLE",
         "w-0": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         },
         "w-1": {
             "STATE": "EMPTY",
@@ -112,21 +112,21 @@
     },
     "step-4": {
         "d-0": "IDLE",
-        "d-1": "SENDING",
+        "d-1": "IDLE",
         "d-2": "IDLE",
         "d-3": "IDLE",
         "d-4": "IDLE",
         "w-0": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         },
         "w-1": {
-            "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "STATE": "EMPTY",
+            "DATA": ""
         },
         "w-2": {
-            "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "STATE": "EMPTY",
+            "DATA": ""
         },
         "w-3": {
             "STATE": "EMPTY",
@@ -139,21 +139,21 @@
     },
     "step-5": {
         "d-0": "IDLE",
-        "d-1": "IDLE",
+        "d-1": "SENDING",
         "d-2": "IDLE",
         "d-3": "IDLE",
         "d-4": "IDLE",
         "w-0": {
-            "STATE": "EMPTY",
-            "DATA": ""
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
         },
         "w-1": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         },
         "w-2": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         },
         "w-3": {
             "STATE": "EMPTY",
@@ -176,11 +176,11 @@
         },
         "w-1": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         },
         "w-2": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         },
         "w-3": {
             "STATE": "EMPTY",
@@ -194,6 +194,33 @@
     "step-7": {
         "d-0": "IDLE",
         "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-2": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-8": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
         "d-2": "SENDING_AND_RECEIVING",
         "d-3": "IDLE",
         "d-4": "IDLE",
@@ -203,22 +230,22 @@
         },
         "w-1": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         },
         "w-2": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         },
         "w-3": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         },
         "w-4": {
             "STATE": "EMPTY",
             "DATA": ""
         }
     },
-    "step-8": {
+    "step-9": {
         "d-0": "IDLE",
         "d-1": "IDLE",
         "d-2": "IDLE",
@@ -234,18 +261,18 @@
         },
         "w-2": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         },
         "w-3": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         },
         "w-4": {
             "STATE": "EMPTY",
             "DATA": ""
         }
     },
-    "step-9": {
+    "step-10": {
         "d-0": "IDLE",
         "d-1": "IDLE",
         "d-2": "IDLE",
@@ -261,18 +288,18 @@
         },
         "w-2": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         },
         "w-3": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         },
         "w-4": {
             "STATE": "EMPTY",
             "DATA": ""
         }
     },
-    "step-10": {
+    "step-11": {
         "d-0": "IDLE",
         "d-1": "IDLE",
         "d-2": "IDLE",
@@ -288,7 +315,7 @@
         },
         "w-2": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         },
         "w-3": {
             "STATE": "EMPTY",
@@ -296,10 +323,10 @@
         },
         "w-4": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         }
     },
-    "step-11": {
+    "step-12": {
         "d-0": "IDLE",
         "d-1": "IDLE",
         "d-2": "IDLE",
@@ -323,7 +350,7 @@
         },
         "w-4": {
             "STATE": "IN_USE",
-            "DATA": "(hi)"
+            "DATA": "(wakeup)"
         }
     }
 }

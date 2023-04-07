@@ -29,11 +29,12 @@ header{
 
 
 nav a{
-  margin: 0 2rem;
+  margin: 0 3rem;
   color: var(--textColor);
   text-decoration: none;
 }
 
+.link:hover,
 nav a:hover{
   color: var(--hoverColor);
 }

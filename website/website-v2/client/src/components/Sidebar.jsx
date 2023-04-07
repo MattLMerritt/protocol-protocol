@@ -81,10 +81,14 @@ const Sidebar = () => {
             className="link"
             to="https://github.com/MattLMerritt/protocol-protocol"
           >
-            <img src={github_logo} alt="" />
+            <img 
+            src={github_logo}
+            alt=""
+            style={{ width: "100px", height: "110px" }}/>
           </Link>
           <Link className="link" to="https://rcos.io/">
-            <img src={rcos_logo_red} alt="" />
+            <img src={rcos_logo_red} alt="" 
+            style={{width: "175px", height: "100px"}}/>
           </Link>
         </div>
       </div>

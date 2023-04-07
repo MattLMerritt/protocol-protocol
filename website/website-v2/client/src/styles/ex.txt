@@ -62,12 +62,10 @@ $sidebar_min_activation_width: 1500px;
       list-style-type: none;
       list-style-position: inside;
     }
-    
     .inner_list_item {
       margin-top: 5px;
       margin-bottom: 5px;
       padding-left: 40px;
-
       .link {
         text-decoration: none;
       }

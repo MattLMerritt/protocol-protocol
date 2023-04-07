@@ -4,6 +4,7 @@ from device import Device
 from wire import Wire
 from wakeup_protocol import WakeupDevice, init_wakeup
 from event import Events, StartEvent
+from generator import update_outward_wires_for_devices
 
 if __name__ == "__main__":
 
@@ -22,6 +23,8 @@ if __name__ == "__main__":
     time_steps = 100
     
     world_devices, world_wires = init_wakeup()
+
+    update_outward_wires_for_devices(world_devices, world_wires)
 
     # add events to waking up
     events = Events()

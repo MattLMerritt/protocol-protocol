@@ -20,6 +20,7 @@ class Device():
         self.id = id
         self.local_time = 0
         self.state = DeviceState.IDLE
+        self.outward_wire_ids = []
         # timed_sends is randomized used to emulate a "live" device 
         # the key is the time-step when the message should be sent and the value is the data to be sent 
         self.timed_sends = {}
@@ -37,12 +38,18 @@ class Device():
         # increment local time
         self.local_time = self.local_time + 1
         self.state = DeviceState.IDLE
+    
+    def get_all_outgoing_wires(self):
+        return self.outward_wire_ids
 
     def get_id(self):
         return self.id
 
     def get_name(self):
         return self.name
+    
+    def add_outgoing_wire(self, wire):
+        self.outward_wire_ids.append(wire.get_id())
 
     def send(self, wire, content):
         # send content to wire and update device state

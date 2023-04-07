@@ -13,7 +13,12 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{
+          display: "flex",
+          alignContent: "space-between",
+        }}
+      >
         <Sidebar />
         <Outlet />
       </div>

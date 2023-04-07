@@ -3,7 +3,7 @@ import React from "react";
 const Uart = () => {
   return (
     <div className="container">
-      <div>
+      <div className="content">
         <h1>Universal Asynchronous Receiver/Transmitter (UART) Protocol</h1>
 
         <p id="description">

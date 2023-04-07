@@ -1,8 +1,6 @@
 $sidebar_bg: #e8e6e4;
 $sidebar_border: #d9d6d5;
 $link_activate: #f64740;
-$sidebar_width: 475px;
-$sidebar_min_activation_width: 1500px;
 
 .sidebar {
   width: 30%;
@@ -15,74 +13,59 @@ $sidebar_min_activation_width: 1500px;
   //position: fixed;
   //top: 100px;
   box-sizing: border-box;
-}
 
-@media screen and (min-width: $sidebar_min_activation_width) {
-  .sidebar {
-    flex-grow: 0;
-    flex-shrink: 0;
-    width: $sidebar_width;
-    height: 100vh;
-    padding: 30px 30px;
-    padding-top: 75px;
-    position: sticky;
-    top: 0;
+  background: $sidebar_bg;
+  border: 1px solid $sidebar_border;
 
-    background: $sidebar_bg;
-    border: 1px solid $sidebar_border;
+  .sidebar_content {
+    .section_title {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
 
-    .sidebar_content {
+    .share {
+      width: 80%;
+      position: absolute;
+      bottom: 10%;
+
       .section_title {
-        padding-left: 10px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        //text-align: center;
       }
 
-      .share {
-        width: 80%;
-        position: absolute;
-        bottom: 10%;
-
-        .section_title {
-          //text-align: center;
-        }
-
-        img {
-          //margin: 8px 20px;
-          padding: 22px 20px;
-          padding-left: 20px;
-          height: 125px;
-        }
+      img {
+        //margin: 8px 20px;
+        padding: 22px 20px;
+        padding-left: 20px;
+        height: 125px;
       }
+    }
 
-      .outer_list_item {
-        padding-left: 30px;
-        list-style-type: none;
+    .outer_list_item {
+      list-style-type: none;
 
-        .link {
-          text-decoration: underline;
-          &:hover {
-            color: $link_activate;
-            text-decoration-color: $link_activate;
-          }
+      .link {
+        text-decoration: underline;
+        &:hover {
+          color: $link_activate;
+          text-decoration-color: $link_activate;
         }
       }
+    }
 
-      .inner_list {
-        list-style-type: none;
-        list-style-position: inside;
-      }
-      .inner_list_item {
-        margin-top: 5px;
-        margin-bottom: 5px;
-        padding-left: 40px;
+    .inner_list {
+      list-style-type: none;
+      list-style-position: inside;
+    }
+    .inner_list_item {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      padding-left: 40px;
 
-        .link {
-          text-decoration: none;
-        }
+      .link {
+        text-decoration: none;
       }
-      ul {
-      }
+    }
+    ul {
     }
   }
 }

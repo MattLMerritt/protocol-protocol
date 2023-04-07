@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     
     '''
-    time_steps = 1000
+    time_steps = 13
     
     world_devices, world_wires = init_wakeup()
 

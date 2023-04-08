@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import protlogo from "../imgs/protlogo.png";
-import "../styles/Navbar.css";
+import "../styles/Navbar.scss";
 
 function Navbar() {
   const navRef = useRef();

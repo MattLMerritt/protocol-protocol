@@ -1,21 +1,89 @@
-$navbar_bg: #e8e6e4;
-$navbar_border: #d9d6d5;
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
 
-.navbar {
-  width: 350px;
-  height: 100vh;
-  padding: 20px 20px;
-  //display: flex;
-  font: 26px/32px BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica,
-    Arial, sans-serif;
+$link_activate: #f64740;
 
-  background: $navbar_bg;
-  border: 1px solid $navbar_border;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
 
-  .navbar_content {
-    .contact_info{
-        
-    }
-    
+:root {
+  --mainColor: #29335c;
+  --mainColorLight: #5767aa;
+  --textColor: #eee;
+  --hoverColor: #f64740;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 2rem;
+  background-color: var(--mainColor);
+  color: var(--textColor);
+}
+
+nav a {
+  margin: 0 3rem;
+  color: var(--textColor);
+  text-decoration: none;
+}
+
+.link {
+  &:hover {
+    color: $link_activate;
+    text-decoration-color: $link_activate;
+  }
+}
+
+header .nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--textColor);
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 700px) {
+  header .nav-btn {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: var(--mainColor);
+    transition: 1s;
+    transform: translateY(-100vh);
+  }
+
+  header .responsive_nav {
+    transform: none;
+  }
+
+  nav .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  nav a {
+    font-size: 1.5rem;
   }
 }

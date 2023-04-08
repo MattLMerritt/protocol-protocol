@@ -1,8 +1,8 @@
 $sidebar_bg: #e8e6e4;
 $sidebar_border: #d9d6d5;
 $link_activate: #f64740;
-$sidebar_width: 475px;
-$sidebar_min_activation_width: 1500px;
+$sidebar_width: 225px;
+$sidebar_min_activation_width: 850px;
 
 @media screen and (max-width: $sidebar_min_activation_width) {
   .sidebar * {
@@ -24,30 +24,24 @@ $sidebar_min_activation_width: 1500px;
     background: $sidebar_bg;
     border: 1px solid $sidebar_border;
 
+    .section_title {
+      padding-bottom: 10px;
+    }
 
+    .share {
+      width: 80%;
+      position: absolute;
+      bottom: 10%;
+      padding-bottom: 25px;
       .section_title {
-        padding-left: 10px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        //text-align: center;
       }
-
-      .share {
-        width: 80%;
-        position: absolute;
-        bottom: 10%;
-        .section_title {
-          //text-align: center;
-        }
-        img {
-          //margin: 8px 20px;
-          padding: 22px 20px;
-          padding-left: 20px;
-          height: 125px;
-        }
+      img {
+      }
     }
 
     .outer_list_item {
-      padding-left: 30px;
+      padding-left: 5px;
       list-style-type: none;
       .link {
         text-decoration: underline;
@@ -61,12 +55,13 @@ $sidebar_min_activation_width: 1500px;
     .inner_list {
       list-style-type: none;
       list-style-position: inside;
+      padding-bottom: 10px;
     }
-    
+
     .inner_list_item {
-      margin-top: 5px;
-      margin-bottom: 5px;
-      padding-left: 40px;
+      // margin-top: 5px;
+      // margin-bottom: 5px;
+      padding-left: 12px;
 
       .link {
         text-decoration: none;

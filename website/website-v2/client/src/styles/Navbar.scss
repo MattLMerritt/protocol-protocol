@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
 
+$link_activate: #f64740;
+
 * {
   padding: 0;
   margin: 0;
@@ -30,9 +32,11 @@ nav a {
   text-decoration: none;
 }
 
-.link:hover,
-nav a:hover {
-  color: var(--hoverColor);
+.link {
+  &:hover {
+    color: $link_activate;
+    text-decoration-color: $link_activate;
+  }
 }
 
 header .nav-btn {

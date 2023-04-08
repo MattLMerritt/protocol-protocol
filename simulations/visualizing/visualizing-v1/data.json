@@ -1,0 +1,1415 @@
+{
+    "steps": 30,
+    "devices": 5,
+    "wires": 10,
+    "step-0": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-1": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-2": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-3": {
+        "d-0": "SENDING",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-4": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-5": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-6": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-7": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-8": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-9": {
+        "d-0": "SENDING_AND_RECEIVING",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-10": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-11": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-12": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-13": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-14": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "SENDING",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-15": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "SENDING_AND_RECEIVING",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-16": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-17": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-18": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-19": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-20": {
+        "d-0": "SENDING_AND_RECEIVING",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-3": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-21": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-3": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-22": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-3": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-23": {
+        "d-0": "SENDING_AND_RECEIVING",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-3": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup) (wakeup)"
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-24": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup) (wakeup)"
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-25": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "SENDING",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-3": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup) (wakeup)"
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-26": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "SENDING_AND_RECEIVING",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-3": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-27": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-3": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-28": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "IDLE",
+        "d-3": "IDLE",
+        "d-4": "SENDING",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup) (wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-3": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    },
+    "step-29": {
+        "d-0": "IDLE",
+        "d-1": "IDLE",
+        "d-2": "SENDING_AND_RECEIVING",
+        "d-3": "IDLE",
+        "d-4": "IDLE",
+        "w-0": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup) (wakeup)"
+        },
+        "w-1": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-2": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup) (wakeup)"
+        },
+        "w-3": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-4": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-5": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-6": {
+            "STATE": "IN_USE",
+            "DATA": "(wakeup)"
+        },
+        "w-7": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-8": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        },
+        "w-9": {
+            "STATE": "EMPTY",
+            "DATA": ""
+        }
+    }
+}

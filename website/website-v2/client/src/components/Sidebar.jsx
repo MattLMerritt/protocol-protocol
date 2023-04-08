@@ -82,7 +82,7 @@ const Sidebar = () => {
             <img
               src={github_logo}
               alt=""
-              style={{ width: "50px", height: "auto", marginRight: "10px" }}
+              style={{ width: "45px", height: "auto", marginRight: "10px" }}
             />
           </Link>
           <Link className="link" to="https://rcos.io/">

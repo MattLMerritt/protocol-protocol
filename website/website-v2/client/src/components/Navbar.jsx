@@ -16,11 +16,7 @@ function Navbar() {
     <header>
       <Link className="link" to="/">
         <h3>
-          <img
-            src={protlogo}
-            alt=""
-            style={{ width: "100px", height: "110px" }}
-          />
+          <img src={protlogo} alt="" style={{ width: "auto", height: "5em" }} />
         </h3>
       </Link>
       <nav ref={navRef}>

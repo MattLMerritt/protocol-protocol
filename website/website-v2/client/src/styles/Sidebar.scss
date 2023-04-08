@@ -1,8 +1,8 @@
 $sidebar_bg: #e8e6e4;
 $sidebar_border: #d9d6d5;
 $link_activate: #f64740;
-$sidebar_width: 250px;
-$sidebar_min_activation_width: 1000px;
+$sidebar_width: 225px;
+$sidebar_min_activation_width: 850px;
 
 @media screen and (max-width: $sidebar_min_activation_width) {
   .sidebar * {

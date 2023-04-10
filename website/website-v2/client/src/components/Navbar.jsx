@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import protlogo from "../imgs/protlogo.png";
+import protlogo from "../imgs/protlogo_white.png";
 import "../styles/Navbar.scss";
 
 function Navbar() {

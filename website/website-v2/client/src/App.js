@@ -2,7 +2,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 
 import Home from "./pages/Home";
-import Uart from "./pages/Uart";
+import Uart from "./pages/UART";
 
 import Navbar from "./components/Navbar";
 import "./styles/App.scss";
@@ -13,7 +13,12 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div
+        style={{
+          display: "flex",
+          alignContent: "space-between",
+        }}
+      >
         <Sidebar />
         <Outlet />
       </div>

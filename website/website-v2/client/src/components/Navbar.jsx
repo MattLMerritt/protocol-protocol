@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import protlogo from "../imgs/protlogo.png";
-import "../styles/Navbar.css";
+import protlogo from "../imgs/protlogo_white.png";
+import "../styles/Navbar.scss";
 
 function Navbar() {
   const navRef = useRef();
@@ -16,11 +16,7 @@ function Navbar() {
     <header>
       <Link className="link" to="/">
         <h3>
-          <img
-            src={protlogo}
-            alt=""
-            style={{ width: "100px", height: "110px" }}
-          />
+          <img src={protlogo} alt="" style={{ width: "auto", height: "5em" }} />
         </h3>
       </Link>
       <nav ref={navRef}>

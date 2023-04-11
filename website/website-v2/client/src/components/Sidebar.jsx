@@ -71,8 +71,6 @@ const Sidebar = () => {
             style={{
               color: "#908e8d",
               fontWeight: 500,
-              margin: "0 0 12px",
-              paddingLeft: 20,
             }}
           >
             Share
@@ -81,10 +79,18 @@ const Sidebar = () => {
             className="link"
             to="https://github.com/MattLMerritt/protocol-protocol"
           >
-            <img src={github_logo} alt="" />
+            <img
+              src={github_logo}
+              alt=""
+              style={{ width: "45px", height: "auto", marginRight: "10px" }}
+            />
           </Link>
           <Link className="link" to="https://rcos.io/">
-            <img src={rcos_logo_red} alt="" />
+            <img
+              src={rcos_logo_red}
+              alt=""
+              style={{ width: "100px", height: "auto", marginLeft: "10px" }}
+            />
           </Link>
         </div>
       </div>

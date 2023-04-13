@@ -81,8 +81,10 @@ class RoutingDevice(Device):
         super().receive(content)
     
     def print_routing_table(self):
+        print(f"==== Routing Table for device {self.id} ====")
         for key, value in self.routing_table.items():
             print(f"{key} : {value}")
+        print(f"============================================")
 
     #def send(self, wire, content):
     #    self.routing_table[] super().send(wire, content)

@@ -3,6 +3,7 @@ from generate_json import GenerateJson
 from device import Device
 from wire import Wire
 from wakeup_protocol import WakeupDevice, init_wakeup
+from routing import RoutingDevice, init_routing
 from event import Events, StartEvent
 from generator import update_outward_wires_for_devices
 
@@ -22,13 +23,13 @@ if __name__ == "__main__":
     '''
     time_steps = 100
     
-    world_devices, world_wires = init_wakeup()
+    world_devices, world_wires = init_routing()
 
-    update_outward_wires_for_devices(world_devices, world_wires)
+    # update_outward_wires_for_devices(world_devices, world_wires)
 
     # add events to waking up
     events = Events()
-    events.add_event(StartEvent(world_devices[0], world_wires[0], "wakeup"), 2)
+    events.add_event(StartEvent(world_devices[0], world_wires[0], "start"), 2)
 
     # export data
     gen_json = GenerateJson(time_steps, world_devices, world_wires)

@@ -1,7 +1,8 @@
 from device import Device
 from wire import Wire
+from collections import deque
 
-def add_undirected_wire(i, device_one : Device, device_two : Device, devices):
+def add_unweighted_undirected_wire(i, device_one : Device, device_two : Device, devices):
     wire_one = Wire(i, device_one.get_id(), device_two.get_id(), devices, 1)
     wire_two = Wire(i + 1, device_two.get_id(), device_one.get_id(), devices, 1)
     return wire_one, wire_two
@@ -14,18 +15,53 @@ def init_routing():
     for i in range(0, 5):
         devices[i] = RoutingDevice(i)
 
-    for i in range(0, 10, 2):
-        wire_one, wire_two = add_undirected_wire(i, devices[i], devices[i+1], devices)
-        wires[i] = wire_one
-        wires[i + 1] = wire_two
+    j = 0
+    for i in range(0, 8, 2):
+        wires[i], wires[i + 1] = add_unweighted_undirected_wire(i, devices[j], devices[j+1], devices)
+        j += 1
 
-    wires[9], wires[10] = add_undirected_wire(9, devices[0], devices[4], devices)
+    wires[8], wires[9] = add_unweighted_undirected_wire(9, devices[0], devices[4], devices)
 
+    for device in devices.values():
+        device.print_device()
 
+    for wire in wires.values():
+        wire.print_wire()
 
     return devices, wires
 
 # 
+
+#def create_routing_tables(devices, wires):
+#    break
+
+#def create_routing_table(device):
+
+def bfs(node):
+
+    graph = {
+        'A' : ['B','C'],
+        'B' : ['D', 'E'],
+        'C' : ['F'],
+        'D' : [],
+        'E' : ['F'],
+        'F' : []
+    }
+
+    visited = [] # List to keep track of visited nodes.
+    queue = deque()
+
+    visited.append(node)
+    queue.append(node)
+
+    while queue:
+        s = queue.popleft(0) 
+        print (s, end = " ") 
+
+        for neighbour in graph[s]:
+            if neighbour not in visited:
+                visited.append(neighbour)
+                queue.append(neighbour)
 
 class RoutingDevice(Device):
 
@@ -41,4 +77,7 @@ class RoutingDevice(Device):
 
     def receive(self, content):
         super().receive(content)
+
+    #def send(self, wire, content):
+    #    self.routing_table[] super().send(wire, content)
 

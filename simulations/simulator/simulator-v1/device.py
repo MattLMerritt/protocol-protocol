@@ -78,3 +78,6 @@ class Device():
             return "SENDING_AND_RECEIVING"
         else:
             return "UNKNOWN-STATE"
+    
+    def print_device(self):
+        print(f"device {self.id} : {self.name}")

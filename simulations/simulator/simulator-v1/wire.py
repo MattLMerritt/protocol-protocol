@@ -80,3 +80,6 @@ class Wire():
                     message += '(' + it[1] + ') '
             res["DATA"] = message.strip()
         return res
+
+    def print_wire(self):
+        print(f"wire {self.id}: ( {self.rec_device_id} ) --> ( {self.send_device_id} )")

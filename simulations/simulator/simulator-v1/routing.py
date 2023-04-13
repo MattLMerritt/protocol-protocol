@@ -11,57 +11,59 @@ def init_routing():
     wires = {}
     devices = {}
 
-    # example graph will be a cycle from 1 -> 2 -> 3 -> 4 -> 5 -> 1
-    for i in range(0, 5):
+    # example graph will be a cycle from 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 1
+    for i in range(0, 8):
         devices[i] = RoutingDevice(i)
 
     j = 0
-    for i in range(0, 8, 2):
+    for i in range(0, 14, 2):
         wires[i], wires[i + 1] = add_unweighted_undirected_wire(i, devices[j], devices[j+1], devices)
         j += 1
 
-    wires[8], wires[9] = add_unweighted_undirected_wire(9, devices[0], devices[4], devices)
+    wires[14], wires[15] = add_unweighted_undirected_wire(9, devices[0], devices[7], devices)
 
     for device in devices.values():
         device.print_device()
 
     for wire in wires.values():
         wire.print_wire()
+    
+    graph = create_adjacency_list(devices, wires)
+
+    create_routing_table(graph, devices[0])
+    devices[0].print_routing_table()
 
     return devices, wires
 
-# 
+def create_adjacency_list(devices, wires):
+    graph = {}
+    for device_id in devices:
+        graph[device_id] = []
+    
+    for wire in wires.values():
+        graph[wire.get_rec_device_id()].append(wire.get_send_device_id())
 
-#def create_routing_tables(devices, wires):
-#    break
+    return graph
 
-#def create_routing_table(device):
+def create_routing_table(graph, device : Device):
 
-def bfs(node):
-
-    graph = {
-        'A' : ['B','C'],
-        'B' : ['D', 'E'],
-        'C' : ['F'],
-        'D' : [],
-        'E' : ['F'],
-        'F' : []
-    }
-
-    visited = [] # List to keep track of visited nodes.
+    visited = []
     queue = deque()
 
-    visited.append(node)
-    queue.append(node)
+    visited.append(device.get_id())
+    queue.append(device.get_id())
 
     while queue:
-        s = queue.popleft(0) 
-        print (s, end = " ") 
-
-        for neighbour in graph[s]:
-            if neighbour not in visited:
-                visited.append(neighbour)
-                queue.append(neighbour)
+        s = queue.popleft() 
+        for node in graph[s]:
+            if node not in visited:
+                # if the previous node is the same as the starting node we just add the routing to itself
+                if s is device.get_id():
+                    device.add_routing(node, node)
+                else:
+                    device.add_routing(node, s)
+                visited.append(node)
+                queue.append(node)
 
 class RoutingDevice(Device):
 
@@ -72,11 +74,15 @@ class RoutingDevice(Device):
         if(name == "device " + str(id)):
             self.name = "routing device " + str(id)
 
-    def add_routing(self, dev: Device, path):
-        self.routing_table[dev.get_id()] = path
+    def add_routing(self, target_device_id, from_device_id):
+        self.routing_table[target_device_id] = from_device_id
 
     def receive(self, content):
         super().receive(content)
+    
+    def print_routing_table(self):
+        for key, value in self.routing_table.items():
+            print(f"{key} : {value}")
 
     #def send(self, wire, content):
     #    self.routing_table[] super().send(wire, content)

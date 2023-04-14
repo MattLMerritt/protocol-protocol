@@ -1,6 +1,6 @@
 
 import networkx as nx
-
+import random
 
 def p2p_graph(oneway = False):
     G = nx.DiGraph()
@@ -38,5 +38,13 @@ def mesh_graph(numnodes):
     
     return G
 
+
+
+def merge_graph(G1, G2, rename = ("L", "R")):
+    G = nx.union(G1, G2, rename = (rename[0], rename[1]))
+    random_edge_G1 = str(random.choice(list(G1.edges()))[0])
+    random_edge_G2 = str(random.choice(list(G2.edges()))[0])
+    G.add_edge(rename[0]+random_edge_G1, rename[1]+random_edge_G2)
+    return G
 
 

@@ -52,12 +52,31 @@ const Sidebar = () => {
               <li className="outer_list_item">
                 <details>
                   <summary>
-                    <Link className="link">Protocol 2</Link>
+                    <Link className="link" to="/I2C">
+                      I2C
+                    </Link>
                   </summary>
                   <ul className="inner_list">
                     <li className="inner_list_item">
                       {" "}
-                      <HashLink className="link"> inner_list_item</HashLink>
+                      <HashLink className="link" to="/I2C/#description">
+                        {" "}
+                        Description
+                      </HashLink>
+                    </li>
+                    <li className="inner_list_item">
+                      {" "}
+                      <HashLink className="link" to="/I2C/#examples">
+                        {" "}
+                        Examples
+                      </HashLink>
+                    </li>
+                    <li className="inner_list_item">
+                      {" "}
+                      <HashLink className="link" to="/I2C/#instructions">
+                        {" "}
+                        Instructions
+                      </HashLink>
                     </li>
                   </ul>
                 </details>

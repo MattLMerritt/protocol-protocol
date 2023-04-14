@@ -26,4 +26,17 @@ def ring_graph(numnodes, oneway = False):
     return G
 
 
+def mesh_graph(numnodes):
+    if numnodes < 2: 
+        raise ValueError("To make a mesh graph, you should have at least 2 nodes")
+    
+    G = nx.DiGraph()
+    for i in range(numnodes):
+        for j in range(numnodes):
+            if i == j: continue
+            G.add_edge(i, j)
+    
+    return G
+
+
 

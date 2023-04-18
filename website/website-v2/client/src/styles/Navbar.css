@@ -1,22 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
 
-$link_activate: #f64740;
-
-* {
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
+
 }
 
-:root {
-  --mainColor: #29335c;
+:root{
+  --mainColor: #29335C;
   --mainColorLight: #5767aa;
   --textColor: #eee;
   --hoverColor: #f64740;
+
 }
 
-header {
+
+header{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,19 +27,19 @@ header {
   color: var(--textColor);
 }
 
-nav a {
+
+nav a{
   margin: 0 3rem;
   color: var(--textColor);
   text-decoration: none;
 }
 
-.link {
-    &:hover {
-      color: var(--hoverColor);
-    }
+
+nav a:hover{
+  color: var(--hoverColor);
 }
 
-header .nav-btn {
+header .nav-btn{
   padding: 5px;
   cursor: pointer;
   background: transparent;
@@ -50,13 +51,14 @@ header .nav-btn {
   font-size: 1.8rem;
 }
 
-@media only screen and (max-width: 700px) {
-  header .nav-btn {
+
+@media only screen and (max-width: 1048px) {
+  header .nav-btn{
     visibility: visible;
     opacity: 1;
   }
 
-  header nav {
+  header nav{
     position: fixed;
     top: 0;
     left: 0;
@@ -67,22 +69,37 @@ header .nav-btn {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    background-color: var(--mainColor);
+    background-color: var(--mainColor) ;
     transition: 1s;
     transform: translateY(-100vh);
+
   }
 
-  header .responsive_nav {
+  header .responsive_nav{
     transform: none;
   }
 
-  nav .nav-close-btn {
+  nav .nav-close-btn{
     position: absolute;
     top: 2rem;
     right: 2rem;
+
   }
 
-  nav a {
+  nav a{
     font-size: 1.5rem;
   }
+  
+
 }
+
+
+
+
+
+
+
+
+
+
+

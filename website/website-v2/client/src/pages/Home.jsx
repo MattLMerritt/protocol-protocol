@@ -38,11 +38,6 @@ const Home = () => {
           projects, as apart of Rensselaer Center for Open Source (
           <a href="https://rcos.io/">RCOS</a>).
         </p>
-        <p className="text-block">
-          This project was made possible using Docsify.js, click{" "}
-          <a href="https://github.com/docsifyjs/docsify/">here</a>
-          to learn more.
-        </p>
         <h2 className="subheader-size">License</h2>
         <p className="text-block">MIT</p>
       </div>

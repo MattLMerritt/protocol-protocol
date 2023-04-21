@@ -2,6 +2,16 @@
 import networkx as nx
 import random
 
+
+# return True if there is a reflexive edge in the graph
+def check_reflexive_edge(G):
+    for node in G:
+        for to_node in G[node]:
+            if node == to_node:
+                return True;
+    return False;
+
+
 def p2p_graph(oneway = False):
     G = nx.DiGraph()
     G.add_edge(0, 1)

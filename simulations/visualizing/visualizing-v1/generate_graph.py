@@ -48,3 +48,11 @@ def merge_graph(G1, G2, rename = ("L", "R")):
     return G
 
 
+
+# return a directed graph of the given undirected graph
+def undirected_to_directed(UG):
+    G = nx.DiGraph()
+    for node in UG:
+        for to_node in UG[node]:
+            G.add_edge(node, to_node)
+    return G

@@ -66,7 +66,7 @@ def to_connected(G):
     for node1 in G:
         for node2 in G:
             if find(node1) != find(node2):
-                G.add_edge(node1, node2)
+                G.add_edge(find(node1), find(node2))
                 p[find(node2)] = find(node1)
     return G
 

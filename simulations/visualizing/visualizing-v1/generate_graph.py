@@ -49,6 +49,28 @@ def merge_graph(G1, G2, rename = ("L", "R")):
 
 
 
+# make an unconnected graph to be connected by adding edges
+def to_connected(G):
+    p = dict()
+    for node in G:
+        p[node] = node
+    
+    def find(x):
+        if p[x] != x: p[x] = find(p[x])
+        return p[x]
+    
+    for node in G:
+        for to_node in G[node]:
+            p[find(to_node)] = find(node)
+    
+    for node1 in G:
+        for node2 in G:
+            if find(node1) != find(node2):
+                G.add_edge(node1, node2)
+                p[find(node2)] = find(node1)
+    return G
+
+
 # return a directed graph of the given undirected graph
 def undirected_to_directed(UG):
     G = nx.DiGraph()

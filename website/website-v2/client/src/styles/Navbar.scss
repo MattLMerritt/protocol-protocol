@@ -33,10 +33,9 @@ nav a {
 }
 
 .link {
-  &:hover {
-    color: $link_activate;
-    text-decoration-color: $link_activate;
-  }
+    &:hover {
+      color: var(--hoverColor);
+    }
 }
 
 header .nav-btn {

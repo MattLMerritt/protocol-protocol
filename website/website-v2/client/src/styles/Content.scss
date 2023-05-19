@@ -50,7 +50,7 @@
     margin: 1em 0;
     padding: 0.5em;
     border: 1px solid #ddd;
-    background-color: #f5f5f5;
+    background-color: white;
     white-space: pre-wrap;
     word-break: break-all;
   }
@@ -91,7 +91,7 @@
 }
 
 .contact-us {
-  padding: 250px;
+  padding: 350px;
   padding-top: 50px;
   font-size: 45px;
   text-align: center;
@@ -100,9 +100,8 @@
 
 .image-container {
   display: flex;
-  justify-content: center;
-  padding-right: 30%;
-
+  justify-content: flex-end; // Aligns the logo to the right
+  padding-right: 10%; // Adjust this value as desired to add space to the right
   align-items: center;
 }
 
@@ -113,9 +112,14 @@
 .content-container {
   display: flex;
   align-items: center; /* Adjusts vertical alignment */
-  margin-top: -225px; /* Adjust this value as desired */
+  margin-top: -275px; /* Adjust this value as desired */
+  padding-left: 100px;
 }
 
 .text-container {
   margin-left: 200px; /* Adjusts the space between the image and the text */
+}
+
+.link-img{
+  padding-right: 100px;
 }

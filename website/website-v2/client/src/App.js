@@ -3,6 +3,7 @@ import Sidebar from "./components/Sidebar";
 
 import Home from "./pages/Home";
 import Uart from "./pages/UART";
+import I2C from "./pages/I2C";
 
 import Navbar from "./components/Navbar";
 import "./styles/App.scss";
@@ -38,6 +39,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/Uart",
+        element: <Uart />,
+      },
+      {
+        path: "/I2C",
+        element: <I2C />,
       },
       {
         path: "/Uart",

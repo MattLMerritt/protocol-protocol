@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import protlogo from "../imgs/protlogo_white.png";
-import "../styles/Navbar.scss";
+import "../styles/Navbar.css";
 
 function Navbar() {
   const navRef = useRef();
@@ -20,13 +20,13 @@ function Navbar() {
         </h3>
       </Link>
       <nav ref={navRef}>
-        <Link className="link" to="/contact-us">
+        <a href="/contact-us">
           Contact Us
-        </Link>
+        </a>
         <a href="/#">About</a>
-        <Link className="link" to="/Simulation">
+        <a href="/Simulation">
           Simulation
-        </Link>
+        </a>
         <button className="nav-btn nav-close-btn" onClick={showNavBar}>
           <FaTimes />
         </button>

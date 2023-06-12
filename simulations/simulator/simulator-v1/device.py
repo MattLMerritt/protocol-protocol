@@ -33,7 +33,6 @@ class Device():
         if(name == ""):
             self.name = "device " + str(id)
 
-
     def increment_time(self):
         # increment local time
         self.local_time = self.local_time + 1
@@ -59,12 +58,10 @@ class Device():
         else:
             self.state = DeviceState.SENDING
 
-
     def receive(self, content):
         # receive logic and update state
         self.received_content.append(content)
         self.state = DeviceState.RECEIVING
-
 
     def getStateString(self):
         # return string of state
